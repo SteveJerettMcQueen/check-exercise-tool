@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:composition>
+        <h:form id="exerCheckForm">
+            <div id="editor" class="container-fluid orangeBox">#{exerciseBean.exerDescr}</div>
+
+            <h:inputHidden 
+                id="hiddenProgramCode" 
+                value="#{exerciseBean.programCode}">
+            </h:inputHidden>
+
+            <h:panelGroup layout="block" styleClass="panel-group">
+                <h:outputLabel 
+                    rendered="#{exerciseChecker.inputParamsRender}"
+                    value="#{exerciseChecker.inputParamLabel}">
+                </h:outputLabel>
+                <h:inputTextarea 
+                    id="inputParams"
+                    styleClass="form-control input-lg" 
+                    rows="#{exerciseChecker.inputParamsRows}"
+                    rendered="#{exerciseChecker.inputParamsRender}"
+                    value="#{exerciseBean.inputParams}">
+                </h:inputTextarea>
+            </h:panelGroup>
+
+            <h:panelGroup layout="block" styleClass="panel-group btn-toolbar">
+                <h:commandButton 
+                    value="Compile/Run" 
+                    action="#{exerciseChecker.compileRun}"
+                    styleClass="btn btn-primary">
+                </h:commandButton>
+                <h:commandButton 
+                    value="Automatic Check" 
+                    action="#{exerciseChecker.checkProgram}"
+                    styleClass="btn btn-primary">
+                </h:commandButton>
+            </h:panelGroup>
+
+            <!--Response text-->
+            <h:panelGroup 
+                layout="block" 
+                styleClass="panel-group #{exerciseChecker.alertClass}"
+                rendered="#{exerciseChecker.responseRenderBlock}">
+
+                <h4>
+                    <h:outputLabel 
+                        styleClass="alert-heading"
+                        rendered="#{exerciseChecker.messageLabelRender}"
+                        value="#{exerciseChecker.messageLabel}">
+                        <hr class="my-4"/>
+                    </h:outputLabel>
+                </h4>
+
+                <div class="panel-group">
+                    <h:outputLabel
+                        rendered="#{exerciseChecker.yourOutputLabelRender}"
+                        value="#{exerciseChecker.yourOutputLabel}">
+                    </h:outputLabel>
+                    <h:inputTextarea 
+                        styleClass="form-control input-lg" 
+                        rows="#{exerciseChecker.responseOutputTextRows}"
+                        readonly="true"
+                        value="#{exerciseChecker.responseText}"
+                        rendered="#{exerciseChecker.responseOutputTextAreaRender}">
+                    </h:inputTextarea>
+                                        
+                </div>
+
+                <div class="panel-group">
+                    <h:outputLabel 
+                        rendered="#{exerciseChecker.correctOuputLabelRender}"
+                        value="#{exerciseChecker.correctOutputLabel}">
+                    </h:outputLabel>
+                    <h:inputTextarea 
+                        styleClass="form-control input-lg" 
+                        rows="#{exerciseChecker.correctOutputTextRows}"
+                        readonly="true"
+                        value="#{exerciseBean.correctOutput}"
+                        rendered="#{exerciseChecker.correctOutputTextAreaRender}">
+                    </h:inputTextarea>
+                </div>
+            </h:panelGroup>
+        </h:form>
+    </ui:composition>
+</html>
+

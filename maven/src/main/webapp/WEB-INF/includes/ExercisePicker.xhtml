@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:composition>
+        <h:form styleClass="form-horizontal">
+            <div id="masterHeader" class="container-fluid panel-heading">
+                <div class="text-center">
+                    <h:outputText 
+                        styleClass="headerText" 
+                        value="#{exercisePicker.headerText}">
+                    </h:outputText>
+                </div>
+            </div>
+            <div id="picker" class="orangeBox">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-2 text-right vert-aligned">
+                                <label for="chapterMenu" class="control-label">Choose a Chapter:</label>
+                            </td>
+                            <td class="col-md-3 vert-aligned">
+                                <h:selectOneMenu 
+                                    id="chapterMenu"
+                                    value="#{exercisePicker.chapterItem}"
+                                    converter="#{chapterItemConverter}"
+                                    valueChangeListener="#{exercisePicker.chapterItemValueChanged}"
+                                    styleClass="form-control">
+                                    <f:selectItems 
+                                        var="chapter" 
+                                        value="#{exercisePicker.chapterItems}"
+                                        itemValue="#{chapter}" 
+                                        itemLabel="#{chapter.chapterName}">
+                                    </f:selectItems>
+                                    <f:ajax event="change" execute="@form" render="exerciseMenu"/>
+                                </h:selectOneMenu>
+                            </td>
+                            <td class="col-md-2 text-right vert-aligned">
+                                <label for="exerciseMenu" class="control-label">Choose an Exercise:</label>
+                            </td>
+                            <td class="col-md-3 vert-aligned">
+                                <h:selectOneMenu 
+                                    id="exerciseMenu"
+                                    value="#{exercisePicker.exerciseItem}"
+                                    converter="#{exerciseItemConverter}" 
+                                    valueChangeListener="#{exercisePicker.exerciseItemValueChanged}"
+                                    styleClass="form-control">
+                                    <f:selectItems var="exercise" 
+                                                   value="#{exercisePicker.exerciseItems}"
+                                                   itemValue="#{exercise}" 
+                                                   itemLabel="#{exercise.exerName}">
+                                    </f:selectItems>
+                                </h:selectOneMenu>
+                            </td>
+                            <td class="col-md-2 vert-aligned">
+                                <h:commandButton 
+                                    styleClass="btn btn-primary" 
+                                    value="Set Exercise" 
+                                    action="#{exercisePicker.setExercise}">
+                                </h:commandButton>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </h:form>
+    </ui:composition>
+</html>
+

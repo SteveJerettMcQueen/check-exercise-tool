@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">   
+    
+    <managed-bean>
+        <managed-bean-name>exercisePicker</managed-bean-name>
+        <managed-bean-class>com.lms.maven.bean.controller.ExercisePicker</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>exerciseChecker</managed-bean-name>
+        <managed-bean-class>com.lms.maven.bean.controller.ExerciseChecker</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>chapterItemConverter</managed-bean-name>
+        <managed-bean-class>com.lms.maven.bean.helper.ChapterItemConverter</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>exerciseItemConverter</managed-bean-name>
+        <managed-bean-class>com.lms.maven.bean.helper.ExerciseItemConverter</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+</faces-config>
