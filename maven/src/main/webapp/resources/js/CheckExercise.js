@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* global ace, hljs */
+/* global ace */
 
 $(document).ready(function () {
     // Set ace editor
@@ -12,6 +12,10 @@ $(document).ready(function () {
     editor.setOptions({
         mode: "ace/mode/java",
         theme: "ace/theme/xcode",
+//        theme: "ace/theme/github",
+//        theme: "ace/theme/tommorrow",
+//        theme: "ace/theme/pastel_on_dark",
+//        theme: "ace/theme/tommorrow_night",
         fontSize: "12pt",
         firstLineNumber: 1,
         readOnly: false,
@@ -22,10 +26,17 @@ $(document).ready(function () {
     });
 
     // Set the new value for jsf form submission
-    var hiddenProgramCode = $("#exerCheckForm\\:hiddenProgramCode");
+    var hiddenProgramCode = $("#exer-check-form\\:hidden-program-code");
     editor.getSession().on("change", function () {
         var newCode = editor.getSession().getValue();
         hiddenProgramCode.val(newCode);
     });
+
+//    $("textarea").css('background-color', '#ffffff');
+
+    // Dark style
+//    $("textarea").css('background-color', '#404040');
+//    $("textarea").css('color', '#ffffff');
+
 });
 

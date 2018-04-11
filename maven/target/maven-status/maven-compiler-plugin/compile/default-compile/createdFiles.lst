@@ -2,14 +2,14 @@ com\lms\maven\entity\Chapter.class
 com\lms\maven\ejb\AbstractFacade.class
 com\lms\maven\listener\DerbyNetworkListener.class
 com\lms\maven\ejb\ExerciseFacade.class
-com\lms\maven\entity\Chapter_.class
 com\lms\maven\bean\model\ChapterBean.class
 com\lms\maven\bean\controller\ExercisePicker.class
+com\lms\maven\entity\Chapter_.class
 com\lms\maven\bean\helper\ProcessorBean.class
 com\lms\maven\entity\Exercise.class
 com\lms\maven\bean\helper\ExerciseItemConverter.class
-com\lms\maven\ejb\ChapterFacade.class
 com\lms\maven\bean\controller\ExerciseChecker.class
+com\lms\maven\ejb\ChapterFacade.class
 com\lms\maven\bean\helper\ChapterItemConverter.class
 com\lms\maven\bean\model\ExerciseBean.class
 com\lms\maven\entity\Exercise_.class

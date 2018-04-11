@@ -7,24 +7,24 @@
 
     <ui:composition>
         <h:form styleClass="form-horizontal">
-            <div id="masterHeader" class="container-fluid panel-heading">
+            <div id="master-header" class="container-fluid panel-heading">
                 <div class="text-center">
                     <h:outputText 
-                        styleClass="headerText" 
+                        styleClass="header-text" 
                         value="#{exercisePicker.headerText}">
                     </h:outputText>
                 </div>
             </div>
-            <div id="picker" class="orangeBox">
+            <div id="picker" class="orange-box">
                 <table class="table">
                     <tbody>
                         <tr>
                             <td class="col-md-2 text-right vert-aligned">
-                                <label for="chapterMenu" class="control-label">Choose a Chapter:</label>
+                                <label for="chapter-menu" class="control-label">Choose a Chapter:</label>
                             </td>
                             <td class="col-md-3 vert-aligned">
                                 <h:selectOneMenu 
-                                    id="chapterMenu"
+                                    id="chapter-menu"
                                     value="#{exercisePicker.chapterItem}"
                                     converter="#{chapterItemConverter}"
                                     valueChangeListener="#{exercisePicker.chapterItemValueChanged}"
@@ -35,15 +35,15 @@
                                         itemValue="#{chapter}" 
                                         itemLabel="#{chapter.chapterName}">
                                     </f:selectItems>
-                                    <f:ajax event="change" execute="@form" render="exerciseMenu"/>
+                                    <f:ajax event="change" execute="@form" render="exercise-menu"/>
                                 </h:selectOneMenu>
                             </td>
                             <td class="col-md-2 text-right vert-aligned">
-                                <label for="exerciseMenu" class="control-label">Choose an Exercise:</label>
+                                <label for="exercise-menu" class="control-label">Choose an Exercise:</label>
                             </td>
                             <td class="col-md-3 vert-aligned">
                                 <h:selectOneMenu 
-                                    id="exerciseMenu"
+                                    id="exercise-menu"
                                     value="#{exercisePicker.exerciseItem}"
                                     converter="#{exerciseItemConverter}" 
                                     valueChangeListener="#{exercisePicker.exerciseItemValueChanged}"

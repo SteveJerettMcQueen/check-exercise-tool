@@ -39,7 +39,7 @@ public class ProcessorBean implements Serializable {
 
     @PostConstruct
     public void init() {
-        //Initializes directory to the server binary 
+        //Initializes directory to the server binary tomee
         directory = new File("").getAbsolutePath();
     }
 
@@ -91,7 +91,7 @@ public class ProcessorBean implements Serializable {
                             output = new String[]{"3", err2};
                             break;
                         default:
-                            output = new String[]{"4", err2};
+                            output = new String[]{"4", "Process Terminated!"};
                             break;
                     }
                     deleteFile(clazz + ".class");
@@ -145,7 +145,5 @@ public class ProcessorBean implements Serializable {
                 StandardOpenOption.CREATE,
                 StandardOpenOption.WRITE
         );
-
     }
-
 }

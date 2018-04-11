@@ -117,6 +117,7 @@ public class ExercisePicker {
         exerciseBean.setExerName(e.getExerName());
         exerciseBean.setExerDescr(getExerDescr(e.getExerName()));
         exerciseBean.setInputParams(e.getInputParams());
+        exerciseBean.setProgramCode(null);
         exerciseBean.setCorrectOutput(e.getCorrectOutput());
     }
 

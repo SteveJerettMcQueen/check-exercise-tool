@@ -16,12 +16,12 @@ public class DerbyNetworkListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent evt) {
-        System.out.println("ContextInitialized!");
+
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent evt) {
-        System.out.println("ContextDestroyed!");
+
     }
 
 }

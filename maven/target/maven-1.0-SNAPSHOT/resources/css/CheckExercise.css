@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : sm6668
 */
 #editor { 
-    height: 425px;
+    height: 475px;
     position: relative;
     margin-bottom: 10px;
 }
@@ -19,7 +19,7 @@ and open the template in the editor.
     text-decoration: none;
 }
 
-#masterHeader {
+#master-header {
     background-color: goldenrod; 
     border-bottom: 2px solid grey; 
     border-right: 2px solid grey;
@@ -34,16 +34,21 @@ and open the template in the editor.
     /*    height: 30px;*/
 }
 
-.headerText {
+.header-text {
     color: white;
     font-weight: bold;
     font-family: Verdana; 
+}
+
+.dark-prompt {
+    background: #4d4d4d;  
+    color: #ffffff;
 }
 
 .table tbody > tr > td.vert-aligned {
     vertical-align: middle;
 }
 
-.orangeBox {
+.orange-box {
     border:1px solid #f6912f;
 }

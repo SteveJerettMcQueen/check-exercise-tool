@@ -202,7 +202,7 @@ public class ExerciseChecker {
         return "CheckExercise";
     }
 
-    public String checkProgram() {
+    public String autoCheckProgram() {
         String[] output = processorBean.executeProgram();
         String programOutput = output[1];
         String rows = getRows(programOutput.split("\n"));
@@ -230,6 +230,7 @@ public class ExerciseChecker {
             setResponseOutputTextAreaRender(true);
             setCorrectOutputTextAreaRender(true);
         }
+
         return "CheckExercise";
     }
 
@@ -249,7 +250,7 @@ public class ExerciseChecker {
                 return programOutput;
             case "4":
             default:
-                setMessageLabel("Error!");
+                setMessageLabel("Warning! Program Took Too Long To Run!");
                 return programOutput;
         }
     }
@@ -261,16 +262,14 @@ public class ExerciseChecker {
     private String getCompileRunAlertClassType(String code) {
         switch (code) {
             case "0":
-                return "alert alert-danger";
             case "1":
-                return "alert alert-warning";
-            case "2":
-                return "alert alert-success";
             case "3":
                 return "alert alert-danger";
+            case "2":
+                return "alert alert-success";
             case "4":
             default:
-                return "alert alert-dark";
+                return "alert alert-warning";
         }
     }
 
@@ -285,7 +284,7 @@ public class ExerciseChecker {
     }
 
     private String getRows(String[] text) {
-        return Integer.toString(text.length+1);
+        return Integer.toString(text.length + 1);
     }
 
     private boolean isCorrect(String str, String str2) {
