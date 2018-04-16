@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\repositories\check-exercise-tool\maven\target\maven-1.0-SNAPSHOT" path="/maven">
+  <Resource auth="Container" description="Datasource to checkexercisetool database" driverClassName="org.apache.derby.jdbc.ClientDriver" maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/cetDS" password="csci5520" type="javax.sql.DataSource" url="jdbc:derby://localhost:1527/checkexercisetool" username="lms"/>
+</Context>

@@ -28,4 +28,10 @@
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
 
+    <managed-bean>
+        <managed-bean-name>differentWordsConverter</managed-bean-name>
+        <managed-bean-class>com.lms.maven.bean.helper.DifferentWordsConverter</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
 </faces-config>

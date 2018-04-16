@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1">
+    <properties></properties>
+    <ejb-deployment container-id="Default Stateless Container" deployment-id="ChapterFacade" ejb-name="ChapterFacade">
+        <resource-link res-id="DerbyLMS" res-ref-name="openejb/Resource/maven-1.0-SNAPSHOT/DerbyLMS"/>
+        <resource-link res-id="DerbyLMS" res-ref-name="openejb/Resource/DerbyLMS"/>
+    </ejb-deployment>
+    <ejb-deployment container-id="Default Stateless Container" deployment-id="ExerciseFacade" ejb-name="ExerciseFacade">
+        <resource-link res-id="DerbyLMS" res-ref-name="openejb/Resource/maven-1.0-SNAPSHOT/DerbyLMS"/>
+        <resource-link res-id="DerbyLMS" res-ref-name="openejb/Resource/DerbyLMS"/>
+    </ejb-deployment>
+    <ejb-deployment container-id="Default Managed Container" deployment-id="maven.Comp1317591590" ejb-name="maven.Comp">
+        <resource-link res-id="DerbyLMS" res-ref-name="openejb/Resource/maven-1.0-SNAPSHOT/DerbyLMS"/>
+        <resource-link res-id="DerbyLMS" res-ref-name="openejb/Resource/DerbyLMS"/>
+    </ejb-deployment>
+</openejb-jar>

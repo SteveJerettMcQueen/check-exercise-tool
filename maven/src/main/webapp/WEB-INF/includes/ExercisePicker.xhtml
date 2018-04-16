@@ -6,7 +6,9 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
     <ui:composition>
-        <h:form styleClass="form-horizontal">
+        <!--Exercise Picker Form-->
+        <h:form id="exer-picker-form" styleClass="form-horizontal">
+            <!--Exercise Picker Header-->
             <div id="master-header" class="container-fluid panel-heading">
                 <div class="text-center">
                     <h:outputText 
@@ -15,20 +17,22 @@
                     </h:outputText>
                 </div>
             </div>
-            <div id="picker" class="orange-box">
+            <!--Exercise Picker Form Controls-->
+            <div id="picker-box" class="orange-box">
                 <table class="table">
                     <tbody>
                         <tr>
+                            <!--Chapter Menu-->
                             <td class="col-md-2 text-right vert-aligned">
                                 <label for="chapter-menu" class="control-label">Choose a Chapter:</label>
                             </td>
                             <td class="col-md-3 vert-aligned">
                                 <h:selectOneMenu 
                                     id="chapter-menu"
+                                    styleClass="form-control"
                                     value="#{exercisePicker.chapterItem}"
                                     converter="#{chapterItemConverter}"
-                                    valueChangeListener="#{exercisePicker.chapterItemValueChanged}"
-                                    styleClass="form-control">
+                                    valueChangeListener="#{exercisePicker.chapterItemValueChanged}">
                                     <f:selectItems 
                                         var="chapter" 
                                         value="#{exercisePicker.chapterItems}"
@@ -38,20 +42,22 @@
                                     <f:ajax event="change" execute="@form" render="exercise-menu"/>
                                 </h:selectOneMenu>
                             </td>
+                            <!--Exercise Menu-->
                             <td class="col-md-2 text-right vert-aligned">
                                 <label for="exercise-menu" class="control-label">Choose an Exercise:</label>
                             </td>
                             <td class="col-md-3 vert-aligned">
                                 <h:selectOneMenu 
                                     id="exercise-menu"
+                                    styleClass="form-control"
                                     value="#{exercisePicker.exerciseItem}"
                                     converter="#{exerciseItemConverter}" 
-                                    valueChangeListener="#{exercisePicker.exerciseItemValueChanged}"
-                                    styleClass="form-control">
-                                    <f:selectItems var="exercise" 
-                                                   value="#{exercisePicker.exerciseItems}"
-                                                   itemValue="#{exercise}" 
-                                                   itemLabel="#{exercise.exerName}">
+                                    valueChangeListener="#{exercisePicker.exerciseItemValueChanged}">
+                                    <f:selectItems 
+                                        var="exercise" 
+                                        value="#{exercisePicker.exerciseItems}"
+                                        itemValue="#{exercise}" 
+                                        itemLabel="#{exercise.exerName}">
                                     </f:selectItems>
                                 </h:selectOneMenu>
                             </td>
@@ -59,7 +65,7 @@
                                 <h:commandButton 
                                     styleClass="btn btn-primary" 
                                     value="Set Exercise" 
-                                    action="#{exercisePicker.setExercise}">
+                                    action="#{exercisePicker.pickExercise}">
                                 </h:commandButton>
                             </td>
                         </tr>

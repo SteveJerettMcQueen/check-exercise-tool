@@ -27,6 +27,9 @@ public class ExercisePicker {
     private Exercise exerciseItem;
     private List<Chapter> chapterItems;
     private List<Exercise> exerciseItems;
+    private String inputParamsLabel;
+    private boolean inputParamsPanelRender;
+    private String inputParamsRows;
 
     @Inject
     private ChapterBean chapterBean;
@@ -46,6 +49,8 @@ public class ExercisePicker {
         headerText = getHeaderText(exerciseItem.getExerName());
         setChapterBean(chapterItem);
         setExerciseBean(exerciseItem);
+        setInputParamsFor(exerciseItem);
+        inputParamsLabel = "Enter input data for the program (Sample data provided below. You may modify it.)";
     }
 
     public String getHeaderText() {
@@ -88,6 +93,30 @@ public class ExercisePicker {
         this.exerciseItems = exerciseItems;
     }
 
+    public String getInputParamsLabel() {
+        return inputParamsLabel;
+    }
+
+    public void setInputParamsLabel(String inputParamsLabel) {
+        this.inputParamsLabel = inputParamsLabel;
+    }
+
+    public boolean getInputParamsPanelRender() {
+        return inputParamsPanelRender;
+    }
+
+    public void setInputParamsPanelRender(boolean inputParamsPanelRender) {
+        this.inputParamsPanelRender = inputParamsPanelRender;
+    }
+
+    public String getInputParamsRows() {
+        return inputParamsRows;
+    }
+
+    public void setInputParamsRows(String inputParamsRows) {
+        this.inputParamsRows = inputParamsRows;
+    }
+
     public void chapterItemValueChanged(ValueChangeEvent e) {
         chapterItem = (Chapter) (e.getNewValue());
         int index = chapterItems.indexOf(chapterItem);
@@ -98,11 +127,11 @@ public class ExercisePicker {
         exerciseItem = (Exercise) (e.getNewValue());
     }
 
-    public String setExercise() {
+    public void pickExercise() {
         setHeaderText(getHeaderText(exerciseItem.getExerName()));
         setChapterBean(chapterItem);
         setExerciseBean(exerciseItem);
-        return "CheckExercise";
+        setInputParamsFor(exerciseItem);
     }
 
     private void setChapterBean(Chapter c) {
@@ -119,6 +148,16 @@ public class ExercisePicker {
         exerciseBean.setInputParams(e.getInputParams());
         exerciseBean.setProgramCode(null);
         exerciseBean.setCorrectOutput(e.getCorrectOutput());
+    }
+
+    private void setInputParamsFor(Exercise e) {
+        boolean isNotNull = (e.getInputParams() != null);
+        inputParamsPanelRender = (isNotNull);
+        if (isNotNull) {
+            inputParamsRows = Integer.toString(e.getInputParams().split("\n").length);
+        } else {
+            inputParamsRows = "0";
+        }
     }
 
     private String getHeaderText(String exerciseName) {

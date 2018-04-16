@@ -1,0 +1,1 @@
+Cannot find the network server class, org.apache.derby.impl.drda.NetworkServerControlImpl. Your class path should contain derbynet.jar.

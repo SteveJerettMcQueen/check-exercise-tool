@@ -1,0 +1,557 @@
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Server version:        Apache Tomcat (TomEE)/8.5.6 (7.0.2)
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Server built:          Oct 6 2016 20:15:31 UTC
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Server number:         8.5.6.0
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke OS Name:               Windows 10
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke OS Version:            10.0
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Architecture:          amd64
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Java Home:             C:\Program Files\Java\jdk1.8.0_144\jre
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke JVM Version:           1.8.0_144-b01
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke JVM Vendor:            Oracle Corporation
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke CATALINA_BASE:         E:\apache-tomee-webprofile-7.0.2
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke CATALINA_HOME:         E:\apache-tomee-webprofile-7.0.2
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -javaagent:E:\apache-tomee-webprofile-7.0.2\lib\openejb-javaagent.jar
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -Djava.util.logging.config.file=E:\apache-tomee-webprofile-7.0.2\conf\logging.properties
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Dcatalina.base=E:\apache-tomee-webprofile-7.0.2
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Dcatalina.home=E:\apache-tomee-webprofile-7.0.2
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Djava.io.tmpdir=E:\apache-tomee-webprofile-7.0.2\temp
+01-Apr-2018 13:10:00.048 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\7-Zip;C:\Program Files\7-Zip;.;C:\Program Files\MATLAB\R2017a\bin;C:\Users\sm6668\AppData\Local\Microsoft\WindowsApps;;.
+01-Apr-2018 13:10:00.173 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Initializing ProtocolHandler ["http-nio-8080"]
+01-Apr-2018 13:10:00.252 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Using a shared selector for servlet write/read
+01-Apr-2018 13:10:00.252 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Initializing ProtocolHandler ["ajp-nio-8009"]
+01-Apr-2018 13:10:00.252 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Using a shared selector for servlet write/read
+01-Apr-2018 13:10:00.424 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+01-Apr-2018 13:10:00.486 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> ********************************************************************************
+01-Apr-2018 13:10:00.486 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> OpenEJB http://tomee.apache.org/
+01-Apr-2018 13:10:00.486 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Startup: Sun Apr 01 13:10:00 EDT 2018
+01-Apr-2018 13:10:00.486 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Copyright 1999-2016 (C) Apache OpenEJB Project, All Rights Reserved.
+01-Apr-2018 13:10:00.486 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Version: 7.0.2
+01-Apr-2018 13:10:00.486 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Build date: 20161106
+01-Apr-2018 13:10:00.486 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Build time: 07:23
+01-Apr-2018 13:10:00.486 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> ********************************************************************************
+01-Apr-2018 13:10:00.486 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> openejb.home = E:\apache-tomee-webprofile-7.0.2
+01-Apr-2018 13:10:00.486 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> openejb.base = E:\apache-tomee-webprofile-7.0.2
+01-Apr-2018 13:10:00.486 INFO [main] org.apache.openejb.cdi.CdiBuilder.initializeOWB Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@3745e5c6
+01-Apr-2018 13:10:00.486 INFO [main] org.apache.openejb.cdi.CdiBuilder.initializeOWB Succeeded in installing singleton service
+01-Apr-2018 13:10:00.502 INFO [main] org.apache.openejb.config.ConfigurationFactory.init TomEE configuration file is 'E:\apache-tomee-webprofile-7.0.2\conf\tomee.xml'
+01-Apr-2018 13:10:00.533 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+01-Apr-2018 13:10:00.533 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+01-Apr-2018 13:10:00.533 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.deployments.classpath=false'
+01-Apr-2018 13:10:00.549 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating TransactionManager(id=Default Transaction Manager)
+01-Apr-2018 13:10:00.596 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating SecurityService(id=Tomcat Security Service)
+01-Apr-2018 13:10:00.643 INFO [main] org.apache.openejb.server.ServiceManager.initServer Creating ServerService(id=cxf-rs)
+01-Apr-2018 13:10:00.754 INFO [main] org.apache.openejb.server.SimpleServiceManager.start   ** Bound Services **
+01-Apr-2018 13:10:00.754 INFO [main] org.apache.openejb.server.SimpleServiceManager.printRow   NAME                 IP              PORT  
+01-Apr-2018 13:10:00.754 INFO [main] org.apache.openejb.server.SimpleServiceManager.start -------
+01-Apr-2018 13:10:00.754 INFO [main] org.apache.openejb.server.SimpleServiceManager.start Ready!
+01-Apr-2018 13:10:00.754 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Initialization processed in 966 ms
+01-Apr-2018 13:10:00.785 INFO [main] org.apache.tomee.catalina.OpenEJBNamingContextListener.bindResource Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
+01-Apr-2018 13:10:00.785 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=UserDatabase)
+01-Apr-2018 13:10:00.785 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Starting service Catalina
+01-Apr-2018 13:10:00.785 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Starting Servlet Engine: Apache Tomcat (TomEE)/8.5.6 (7.0.2)
+01-Apr-2018 13:10:00.801 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\mcqueen.xml
+01-Apr-2018 13:10:00.816 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /mcqueen
+01-Apr-2018 13:10:00.832 SEVERE [localhost-startStop-1] sun.reflect.NativeMethodAccessorImpl.invoke ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/mcqueen]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:724)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:700)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@48b5a89d]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4842)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4974)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [F:\Master\Processed Information\Computer Science\NetbeansWorkSpace\interactive-quiz\mcqueen\target\mcqueen-1.0-SNAPSHOT] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:732)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 more
+
+01-Apr-2018 13:10:00.832 SEVERE [localhost-startStop-1] sun.reflect.NativeMethodAccessorImpl.invoke Error deploying configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\mcqueen.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/mcqueen]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:728)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:700)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+01-Apr-2018 13:10:00.848 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\mcqueen.xml has finished in 47 ms
+01-Apr-2018 13:10:00.848 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\maven.xml
+01-Apr-2018 13:10:00.848 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /maven
+01-Apr-2018 13:10:00.848 SEVERE [localhost-startStop-1] sun.reflect.NativeMethodAccessorImpl.invoke ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/maven]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:724)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:700)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@61e9cea3]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4842)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4974)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [F:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:732)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 more
+
+01-Apr-2018 13:10:00.848 SEVERE [localhost-startStop-1] sun.reflect.NativeMethodAccessorImpl.invoke Error deploying configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\maven.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/maven]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:728)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:700)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+01-Apr-2018 13:10:00.848 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\maven.xml has finished in 0 ms
+01-Apr-2018 13:10:00.848 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying web application directory E:\apache-tomee-webprofile-7.0.2\webapps\ROOT
+01-Apr-2018 13:10:00.848 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /
+01-Apr-2018 13:10:00.973 INFO [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: E:\apache-tomee-webprofile-7.0.2\webapps\ROOT
+01-Apr-2018 13:10:01.020 INFO [localhost-startStop-1] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "E:\apache-tomee-webprofile-7.0.2\webapps\ROOT" loaded.
+01-Apr-2018 13:10:01.020 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: E:\apache-tomee-webprofile-7.0.2\webapps\ROOT
+01-Apr-2018 13:10:01.082 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=E:\apache-tomee-webprofile-7.0.2\webapps\ROOT)
+01-Apr-2018 13:10:01.229 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of web application directory E:\apache-tomee-webprofile-7.0.2\webapps\ROOT has finished in 381 ms
+01-Apr-2018 13:10:01.229 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying web application directory E:\apache-tomee-webprofile-7.0.2\webapps\host-manager
+01-Apr-2018 13:10:01.238 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /host-manager
+01-Apr-2018 13:10:01.272 INFO [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: E:\apache-tomee-webprofile-7.0.2\webapps\host-manager
+01-Apr-2018 13:10:01.272 INFO [localhost-startStop-1] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "E:\apache-tomee-webprofile-7.0.2\webapps\host-manager" loaded.
+01-Apr-2018 13:10:01.272 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: E:\apache-tomee-webprofile-7.0.2\webapps\host-manager
+01-Apr-2018 13:10:01.272 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file E:\apache-tomee-webprofile-7.0.2\webapps\host-manager\META-INF\context.xml
+01-Apr-2018 13:10:01.272 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=E:\apache-tomee-webprofile-7.0.2\webapps\host-manager)
+01-Apr-2018 13:10:01.335 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of web application directory E:\apache-tomee-webprofile-7.0.2\webapps\host-manager has finished in 106 ms
+01-Apr-2018 13:10:01.335 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying web application directory E:\apache-tomee-webprofile-7.0.2\webapps\docs
+01-Apr-2018 13:10:01.335 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /docs
+01-Apr-2018 13:10:01.366 INFO [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: E:\apache-tomee-webprofile-7.0.2\webapps\docs
+01-Apr-2018 13:10:01.366 INFO [localhost-startStop-1] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "E:\apache-tomee-webprofile-7.0.2\webapps\docs" loaded.
+01-Apr-2018 13:10:01.366 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: E:\apache-tomee-webprofile-7.0.2\webapps\docs
+01-Apr-2018 13:10:01.381 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=E:\apache-tomee-webprofile-7.0.2\webapps\docs)
+01-Apr-2018 13:10:01.428 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of web application directory E:\apache-tomee-webprofile-7.0.2\webapps\docs has finished in 93 ms
+01-Apr-2018 13:10:01.428 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying web application directory E:\apache-tomee-webprofile-7.0.2\webapps\manager
+01-Apr-2018 13:10:01.444 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /manager
+01-Apr-2018 13:10:01.475 INFO [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: E:\apache-tomee-webprofile-7.0.2\webapps\manager
+01-Apr-2018 13:10:01.475 INFO [localhost-startStop-1] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "E:\apache-tomee-webprofile-7.0.2\webapps\manager" loaded.
+01-Apr-2018 13:10:01.475 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: E:\apache-tomee-webprofile-7.0.2\webapps\manager
+01-Apr-2018 13:10:01.491 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file E:\apache-tomee-webprofile-7.0.2\webapps\manager\META-INF\context.xml
+01-Apr-2018 13:10:01.491 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=E:\apache-tomee-webprofile-7.0.2\webapps\manager)
+01-Apr-2018 13:10:01.522 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of web application directory E:\apache-tomee-webprofile-7.0.2\webapps\manager has finished in 94 ms
+01-Apr-2018 13:10:01.522 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Starting ProtocolHandler [http-nio-8080]
+01-Apr-2018 13:10:01.522 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Starting ProtocolHandler [ajp-nio-8009]
+01-Apr-2018 13:10:01.538 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Server startup in 770 ms
+01-Apr-2018 13:10:02.164 INFO [http-nio-8080-exec-7] sun.reflect.DelegatingMethodAccessorImpl.invoke Undeploying context [/maven]
+01-Apr-2018 13:10:02.211 INFO [http-nio-8080-exec-9] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\maven.xml
+01-Apr-2018 13:10:02.211 INFO [http-nio-8080-exec-9] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /maven
+01-Apr-2018 13:10:02.823 INFO [http-nio-8080-exec-9] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT
+01-Apr-2018 13:10:03.870 INFO [http-nio-8080-exec-9] org.apache.openejb.config.InitEjbDeployments.deploy Auto-deploying ejb ChapterFacade: EjbDeployment(deployment-id=ChapterFacade)
+01-Apr-2018 13:10:03.870 INFO [http-nio-8080-exec-9] org.apache.openejb.config.InitEjbDeployments.deploy Auto-deploying ejb ExerciseFacade: EjbDeployment(deployment-id=ExerciseFacade)
+01-Apr-2018 13:10:03.871 INFO [http-nio-8080-exec-9] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=maven-1.0-SNAPSHOT/DerbyLMS, type=Resource, provider-id=Default JDBC Database)
+01-Apr-2018 13:10:03.872 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=maven-1.0-SNAPSHOT/DerbyLMS)
+01-Apr-2018 13:10:04.078 INFO [http-nio-8080-exec-9] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Stateless Container, type=Container, provider-id=Default Stateless Container)
+01-Apr-2018 13:10:04.078 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.createContainer Auto-creating a container for bean ChapterFacade: Container(type=STATELESS, id=Default Stateless Container)
+01-Apr-2018 13:10:04.078 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Container(id=Default Stateless Container)
+01-Apr-2018 13:10:04.093 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/maven-1.0-SNAPSHOT/DerbyLMS' in bean ChapterFacade to Resource(id=DerbyLMS)
+01-Apr-2018 13:10:04.093 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/DerbyLMS' in bean ChapterFacade to Resource(id=DerbyLMS)
+01-Apr-2018 13:10:04.093 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/maven-1.0-SNAPSHOT/DerbyLMS' in bean ExerciseFacade to Resource(id=DerbyLMS)
+01-Apr-2018 13:10:04.093 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/DerbyLMS' in bean ExerciseFacade to Resource(id=DerbyLMS)
+01-Apr-2018 13:10:04.093 INFO [http-nio-8080-exec-9] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Managed Container, type=Container, provider-id=Default Managed Container)
+01-Apr-2018 13:10:04.093 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.createContainer Auto-creating a container for bean maven.Comp52175447: Container(type=MANAGED, id=Default Managed Container)
+01-Apr-2018 13:10:04.093 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Container(id=Default Managed Container)
+01-Apr-2018 13:10:04.109 INFO [http-nio-8080-exec-9] org.apache.openejb.core.managed.SimplePassivater.init Using directory E:\apache-tomee-webprofile-7.0.2\temp for stateful session passivation
+01-Apr-2018 13:10:04.109 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/maven-1.0-SNAPSHOT/DerbyLMS' in bean maven.Comp52175447 to Resource(id=DerbyLMS)
+01-Apr-2018 13:10:04.109 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/DerbyLMS' in bean maven.Comp52175447 to Resource(id=DerbyLMS)
+01-Apr-2018 13:10:04.109 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.deploy Configuring PersistenceUnit(name=lms_derby_PU)
+01-Apr-2018 13:10:04.109 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.logAutoCreateResource Auto-creating a Resource with id 'maven-1.0-SNAPSHOT/DerbyLMSNonJta' of type 'DataSource for 'lms_derby_PU'.
+01-Apr-2018 13:10:04.109 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.deploy Configuring Service(id=maven-1.0-SNAPSHOT/DerbyLMSNonJta, type=Resource, provider-id=maven-1.0-SNAPSHOT/DerbyLMS)
+01-Apr-2018 13:10:04.109 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=maven-1.0-SNAPSHOT/DerbyLMSNonJta)
+01-Apr-2018 13:10:04.156 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.setJtaDataSource Adjusting PersistenceUnit lms_derby_PU <jta-data-source> to Resource ID 'maven-1.0-SNAPSHOT/DerbyLMS' from 'DerbyLMS'
+01-Apr-2018 13:10:04.156 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AutoConfig.setNonJtaDataSource Adjusting PersistenceUnit lms_derby_PU <non-jta-data-source> to Resource ID 'maven-1.0-SNAPSHOT/DerbyLMSNonJta' from 'null'
+01-Apr-2018 13:10:04.171 INFO [http-nio-8080-exec-9] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT" loaded.
+01-Apr-2018 13:10:04.171 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT
+01-Apr-2018 13:10:04.390 INFO [http-nio-8080-exec-9] null.openjpa.Runtime OpenJPA dynamically loaded a validation provider.
+01-Apr-2018 13:10:04.411 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.ReloadableEntityManagerFactory.createDelegate PersistenceUnit(name=lms_derby_PU, provider=org.apache.openjpa.persistence.PersistenceProviderImpl) - provider time 225ms
+01-Apr-2018 13:10:04.455 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=ChapterFacadeLocalBean) --> Ejb(deployment-id=ChapterFacade)
+01-Apr-2018 13:10:04.455 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/maven/ChapterFacade!com.lms.maven.ejb.ChapterFacade) --> Ejb(deployment-id=ChapterFacade)
+01-Apr-2018 13:10:04.455 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/maven/ChapterFacade) --> Ejb(deployment-id=ChapterFacade)
+01-Apr-2018 13:10:04.455 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=ExerciseFacadeLocalBean) --> Ejb(deployment-id=ExerciseFacade)
+01-Apr-2018 13:10:04.455 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/maven/ExerciseFacade!com.lms.maven.ejb.ExerciseFacade) --> Ejb(deployment-id=ExerciseFacade)
+01-Apr-2018 13:10:04.455 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/maven/ExerciseFacade) --> Ejb(deployment-id=ExerciseFacade)
+01-Apr-2018 13:10:04.471 INFO [http-nio-8080-exec-9] org.apache.openejb.cdi.CdiBuilder.initSingleton Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@3745e5c6
+01-Apr-2018 13:10:04.533 INFO [http-nio-8080-exec-9] org.apache.openejb.cdi.OpenEJBLifecycle.startApplication OpenWebBeans Container is starting...
+01-Apr-2018 13:10:04.533 INFO [http-nio-8080-exec-9] org.apache.webbeans.plugins.PluginLoader.startUp Adding OpenWebBeansPlugin : [CdiPlugin]
+01-Apr-2018 13:10:05.097 INFO [http-nio-8080-exec-9] org.apache.openejb.cdi.CdiScanner.handleBda Using annotated mode for file:/E:/Master/Processed%20Information/Computer%20Science/NetbeansWorkSpace/checkexercisetool/maven/target/maven-1.0-SNAPSHOT/WEB-INF/beans.xml looking all classes to find CDI beans, maybe think to add a beans.xml if not there or add the jar to exclusions.list
+01-Apr-2018 13:10:05.881 INFO [http-nio-8080-exec-9] org.apache.webbeans.config.BeansDeployer.validateInjectionPoints All injection points were validated successfully.
+01-Apr-2018 13:10:05.881 INFO [http-nio-8080-exec-9] org.apache.openejb.cdi.OpenEJBLifecycle.startApplication OpenWebBeans Container has started, it took 1348 ms.
+01-Apr-2018 13:10:05.881 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.Assembler.startEjbs Created Ejb(deployment-id=ChapterFacade, ejb-name=ChapterFacade, container=Default Stateless Container)
+01-Apr-2018 13:10:05.897 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.Assembler.startEjbs Created Ejb(deployment-id=ExerciseFacade, ejb-name=ExerciseFacade, container=Default Stateless Container)
+01-Apr-2018 13:10:05.913 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=ChapterFacade, ejb-name=ChapterFacade, container=Default Stateless Container)
+01-Apr-2018 13:10:05.928 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=ExerciseFacade, ejb-name=ExerciseFacade, container=Default Stateless Container)
+01-Apr-2018 13:10:05.928 INFO [http-nio-8080-exec-9] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT\META-INF\context.xml
+01-Apr-2018 13:10:05.928 INFO [http-nio-8080-exec-9] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT)
+01-Apr-2018 13:10:06.195 INFO [http-nio-8080-exec-9] sun.reflect.DelegatingMethodAccessorImpl.invoke At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Apr-2018 13:10:06.195 INFO [http-nio-8080-exec-9] org.apache.tomee.myfaces.TomEEMyFacesContainerInitializer.addListener Installing <listener>org.apache.myfaces.webapp.StartupServletContextListener</listener>
+01-Apr-2018 13:10:06.242 INFO [http-nio-8080-exec-9] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getStandardFacesConfig Reading standard config META-INF/standard-faces-config.xml
+01-Apr-2018 13:10:06.383 INFO [http-nio-8080-exec-9] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getWebAppFacesConfig Reading config /WEB-INF/faces-config.xml
+01-Apr-2018 13:10:06.398 INFO [http-nio-8080-exec-9] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getClassloaderFacesConfig Reading config : jar:file:/E:/apache-tomee-webprofile-7.0.2/lib/openwebbeans-el22-1.7.0.jar!/META-INF/faces-config.xml
+01-Apr-2018 13:10:06.398 INFO [http-nio-8080-exec-9] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getClassloaderFacesConfig Reading config : jar:file:/E:/Master/Processed%20Information/Computer%20Science/NetbeansWorkSpace/checkexercisetool/maven/target/maven-1.0-SNAPSHOT/WEB-INF/lib/primefaces-extensions-6.2.3.jar!/META-INF/faces-config.xml
+01-Apr-2018 13:10:06.398 INFO [http-nio-8080-exec-9] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getClassloaderFacesConfig Reading config : jar:file:/E:/Master/Processed%20Information/Computer%20Science/NetbeansWorkSpace/checkexercisetool/maven/target/maven-1.0-SNAPSHOT/WEB-INF/lib/primefaces-6.2.jar!/META-INF/faces-config.xml
+01-Apr-2018 13:10:06.445 INFO [http-nio-8080-exec-9] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getClassloaderFacesConfig Reading config : jar:file:/E:/Master/Processed%20Information/Computer%20Science/NetbeansWorkSpace/checkexercisetool/maven/target/maven-1.0-SNAPSHOT/WEB-INF/lib/omnifaces-1.7.jar!/META-INF/faces-config.xml
+01-Apr-2018 13:10:06.445 INFO [http-nio-8080-exec-9] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getClassloaderFacesConfig Reading config : jar:file:/E:/apache-tomee-webprofile-7.0.2/lib/openwebbeans-jsf-1.7.0.jar!/META-INF/faces-config.xml
+01-Apr-2018 13:10:06.619 INFO [http-nio-8080-exec-9] org.apache.myfaces.config.LogMetaInfUtils.logArtifact Artifact 'myfaces-api' was found in version '2.2.11' from path 'file:/E:/apache-tomee-webprofile-7.0.2/lib/myfaces-api-2.2.11.jar'
+01-Apr-2018 13:10:06.619 INFO [http-nio-8080-exec-9] org.apache.myfaces.config.LogMetaInfUtils.logArtifact Artifact 'myfaces-impl' was found in version '2.2.11' from path 'file:/E:/apache-tomee-webprofile-7.0.2/lib/myfaces-impl-2.2.11.jar'
+01-Apr-2018 13:10:06.619 INFO [http-nio-8080-exec-9] org.apache.myfaces.util.ExternalSpecifications.isCDIAvailable MyFaces CDI support enabled
+01-Apr-2018 13:10:06.619 INFO [http-nio-8080-exec-9] org.apache.myfaces.spi.impl.DefaultInjectionProviderFactory.getInjectionProvider Using InjectionProvider org.apache.myfaces.spi.impl.CDIAnnotationDelegateInjectionProvider
+01-Apr-2018 13:10:06.681 INFO [http-nio-8080-exec-9] org.apache.myfaces.util.ExternalSpecifications.isBeanValidationAvailable MyFaces Bean Validation support enabled
+01-Apr-2018 13:10:06.791 INFO [http-nio-8080-exec-9] org.apache.myfaces.config.FacesConfigurator.handleSerialFactory Serialization provider : class org.apache.myfaces.shared_impl.util.serial.DefaultSerialFactory
+01-Apr-2018 13:10:06.791 INFO [http-nio-8080-exec-9] org.apache.myfaces.config.annotation.DefaultLifecycleProviderFactory.getLifecycleProvider Using LifecycleProvider org.apache.myfaces.config.annotation.Tomcat7AnnotationLifecycleProvider
+01-Apr-2018 13:10:06.916 INFO [http-nio-8080-exec-9] org.primefaces.webapp.PostConstructApplicationEventListener.processEvent Running on PrimeFaces 6.2
+01-Apr-2018 13:10:06.916 INFO [http-nio-8080-exec-9] org.primefaces.extensions.application.PostConstructApplicationEventListener.processEvent Running on PrimeFaces Extensions 6.2.3
+01-Apr-2018 13:10:06.916 INFO [http-nio-8080-exec-9] org.omnifaces.VersionLoggerEventListener.processEvent Using OmniFaces version 1.7
+01-Apr-2018 13:10:06.916 INFO [http-nio-8080-exec-9] org.apache.myfaces.webapp.AbstractFacesInitializer.initFaces ServletContext initialized.
+01-Apr-2018 13:10:06.916 INFO [http-nio-8080-exec-9] org.apache.myfaces.util.ExternalSpecifications.isUnifiedELAvailable MyFaces Unified EL support enabled
+01-Apr-2018 13:10:06.916 WARNING [http-nio-8080-exec-9] org.apache.myfaces.webapp.AbstractFacesInitializer.initFaces 
+
+*******************************************************************
+*** WARNING: Apache MyFaces-2 is running in DEVELOPMENT mode.   ***
+***                                         ^^^^^^^^^^^         ***
+*** Do NOT deploy to your live server(s) without changing this. ***
+*** See Application#getProjectStage() for more information.     ***
+*******************************************************************
+
+01-Apr-2018 13:10:06.916 INFO [http-nio-8080-exec-9] org.apache.myfaces.webapp.StartupServletContextListener.contextInitialized MyFaces Core has started, it took [721] ms.
+01-Apr-2018 13:10:06.994 INFO [http-nio-8080-exec-9] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\maven.xml has finished in 4,783 ms
+01-Apr-2018 13:10:06.994 INFO [http-nio-8080-exec-10] sun.reflect.DelegatingMethodAccessorImpl.invoke The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/maven]] after start() had already been called. The second call will be ignored.
+01-Apr-2018 13:10:07.368 INFO [http-nio-8080-exec-5] org.apache.myfaces.el.unified.ResolverBuilderBase.sortELResolvers Chain of EL resolvers for JSP sorted with: org.apache.myfaces.el.unified.OpenWebBeansELResolverComparator@1a79057b and the result order is [org.apache.myfaces.el.unified.resolver.implicitobject.ImplicitObjectResolver@1f4d29f1, org.apache.myfaces.el.FlashELResolver@68fa5aa1, org.apache.myfaces.el.unified.resolver.ManagedBeanResolver@50e3ef, org.apache.myfaces.el.unified.resolver.ResourceBundleResolver@52507c43, org.apache.myfaces.el.unified.resolver.ResourceResolver@2424c559, org.apache.webbeans.el22.WebBeansELResolver@1e31ac2e, org.apache.myfaces.el.convert.VariableResolverToELResolver@19796b9c, org.apache.myfaces.el.convert.PropertyResolverToELResolver@489aae94]
+01-Apr-2018 13:10:07.456 INFO [http-nio-8080-exec-5] org.apache.myfaces.el.unified.ResolverBuilderBase.sortELResolvers Chain of EL resolvers for Faces sorted with: org.apache.myfaces.el.unified.OpenWebBeansELResolverComparator@1a79057b and the result order is [org.apache.myfaces.el.unified.resolver.implicitobject.ImplicitObjectResolver@4a16b4d3, org.apache.myfaces.el.unified.resolver.CompositeComponentELResolver@59553163, org.apache.webbeans.el22.WebBeansELResolver@1e31ac2e, org.apache.myfaces.el.convert.VariableResolverToELResolver@b22945e, org.apache.myfaces.el.convert.PropertyResolverToELResolver@16d175a0, org.apache.myfaces.el.FlashELResolver@699eeb85, org.apache.myfaces.el.unified.resolver.ManagedBeanResolver@19b001fc, org.apache.myfaces.el.unified.resolver.ResourceResolver@62fe6f0, javax.el.ResourceBundleELResolver@1bceefe0, org.apache.myfaces.el.unified.resolver.ResourceBundleResolver@512fddf, org.apache.el.stream.StreamELResolverImpl@1c34b360, javax.el.StaticFieldELResolver@6555ce70, javax.el.MapELResolver@9089cd5, javax.el.ListELResolver@1be6742e, javax.el.ArrayELResolver@22f07b81, javax.el.BeanELResolver@691d17e1]
+01-Apr-2018 13:10:07.557 INFO [http-nio-8080-exec-5] javax.faces.component._ExternalSpecifications.isBeanValidationAvailable MyFaces Bean Validation support enabled
+01-Apr-2018 13:10:07.648 INFO [http-nio-8080-exec-5] null.openjpa.Runtime Starting OpenJPA 2.4.1
+01-Apr-2018 13:10:07.693 INFO [http-nio-8080-exec-5] null.openjpa.jdbc.JDBC Using dictionary class "org.apache.openjpa.jdbc.sql.DerbyDictionary" (Apache Derby 10.11.1.2 - (1629631) ,Apache Derby Network Client JDBC Driver 10.11.1.2 - (1629631)).
+01-Apr-2018 13:10:07.868 INFO [http-nio-8080-exec-5] null.openjpa.jdbc.JDBC Connected to Apache Derby version 10.10 using JDBC driver Apache Derby Network Client JDBC Driver version 10.11.1.2 - (1629631). 
+01-Apr-2018 13:10:15.590 WARNING [http-nio-8080-exec-9] org.apache.myfaces.renderkit.html.HtmlLabelRenderer.encodeBegin Attribute 'for' of label component with id exerCheckForm:j_id_q is not defined
+01-Apr-2018 13:10:21.779 WARNING [http-nio-8080-exec-3] org.apache.myfaces.renderkit.html.HtmlLabelRenderer.encodeBegin Attribute 'for' of label component with id exerCheckForm:j_id_q is not defined
+01-Apr-2018 13:10:25.040 WARNING [http-nio-8080-exec-14] org.apache.myfaces.renderkit.html.HtmlLabelRenderer.encodeBegin Attribute 'for' of label component with id exerCheckForm:j_id_q is not defined
+01-Apr-2018 13:10:37.260 WARNING [http-nio-8080-exec-13] org.apache.myfaces.renderkit.html.HtmlLabelRenderer.encodeBegin Attribute 'for' of label component with id exerCheckForm:j_id_q is not defined
+01-Apr-2018 13:10:40.279 WARNING [http-nio-8080-exec-1] org.apache.myfaces.renderkit.html.HtmlLabelRenderer.encodeBegin Attribute 'for' of label component with id exerCheckForm:j_id_q is not defined
+01-Apr-2018 13:10:40.283 WARNING [http-nio-8080-exec-1] org.apache.myfaces.lifecycle.RenderResponseExecutor.execute There are some unhandled FacesMessages, this means not every FacesMessage had a chance to be rendered.
+These unhandled FacesMessages are: 
+- No navigation case match for viewId /CheckExercise.xhtml,  action #{exerciseChecker.compileRun} and outcome CheckExercise#responseText
+01-Apr-2018 13:12:02.876 WARNING [http-nio-8080-exec-15] org.apache.myfaces.renderkit.html.HtmlLabelRenderer.encodeBegin Attribute 'for' of label component with id exerCheckForm:j_id_q is not defined
+01-Apr-2018 13:12:02.878 WARNING [http-nio-8080-exec-15] org.apache.myfaces.lifecycle.RenderResponseExecutor.execute There are some unhandled FacesMessages, this means not every FacesMessage had a chance to be rendered.
+These unhandled FacesMessages are: 
+- No navigation case match for viewId /CheckExercise.xhtml,  action #{exerciseChecker.compileRun} and outcome CheckExercise#responseText
+01-Apr-2018 13:13:22.174 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+01-Apr-2018 13:13:22.174 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Pausing ProtocolHandler ["http-nio-8080"]
+01-Apr-2018 13:13:22.252 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Pausing ProtocolHandler ["ajp-nio-8009"]
+01-Apr-2018 13:13:22.303 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Stopping service Catalina
+01-Apr-2018 13:13:22.315 INFO [localhost-startStop-2] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: E:\apache-tomee-webprofile-7.0.2\webapps\ROOT
+01-Apr-2018 13:13:22.472 INFO [localhost-startStop-2] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: E:\apache-tomee-webprofile-7.0.2\webapps\host-manager
+01-Apr-2018 13:13:22.628 INFO [localhost-startStop-2] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: E:\apache-tomee-webprofile-7.0.2\webapps\docs
+01-Apr-2018 13:13:22.722 INFO [localhost-startStop-2] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: E:\apache-tomee-webprofile-7.0.2\webapps\manager
+01-Apr-2018 13:13:22.850 INFO [localhost-startStop-2] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT
+01-Apr-2018 13:13:22.865 INFO [localhost-startStop-2] org.apache.openejb.assembler.classic.Assembler.doResourceDestruction Closing DataSource: maven-1.0-SNAPSHOT/DerbyLMS
+01-Apr-2018 13:13:22.975 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Stopping ProtocolHandler ["http-nio-8080"]
+01-Apr-2018 13:13:22.975 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Stopping ProtocolHandler ["ajp-nio-8009"]
+01-Apr-2018 13:13:22.975 INFO [main] org.apache.openejb.server.SimpleServiceManager.stop Stopping server services
+01-Apr-2018 13:13:22.991 INFO [main] org.apache.openejb.assembler.classic.Assembler.doResourceDestruction Closing DataSource: maven-1.0-SNAPSHOT/DerbyLMSNonJta
+01-Apr-2018 13:13:22.991 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Destroying ProtocolHandler ["http-nio-8080"]
+01-Apr-2018 13:13:22.991 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Destroying ProtocolHandler ["ajp-nio-8009"]
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Server version:        Apache Tomcat (TomEE)/8.5.6 (7.0.2)
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Server built:          Oct 6 2016 20:15:31 UTC
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Server number:         8.5.6.0
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke OS Name:               Windows 10
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke OS Version:            10.0
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Architecture:          amd64
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Java Home:             C:\Program Files\Java\jdk1.8.0_144\jre
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke JVM Version:           1.8.0_144-b01
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke JVM Vendor:            Oracle Corporation
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke CATALINA_BASE:         E:\apache-tomee-webprofile-7.0.2
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke CATALINA_HOME:         E:\apache-tomee-webprofile-7.0.2
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -javaagent:E:\apache-tomee-webprofile-7.0.2\lib\openejb-javaagent.jar
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -Djava.util.logging.config.file=E:\apache-tomee-webprofile-7.0.2\conf\logging.properties
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.NativeMethodAccessorImpl.invoke Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Dcatalina.base=E:\apache-tomee-webprofile-7.0.2
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Dcatalina.home=E:\apache-tomee-webprofile-7.0.2
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Command line argument: -Djava.io.tmpdir=E:\apache-tomee-webprofile-7.0.2\temp
+01-Apr-2018 13:13:55.842 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\7-Zip;C:\Program Files\7-Zip;.;C:\Program Files\MATLAB\R2017a\bin;C:\Users\sm6668\AppData\Local\Microsoft\WindowsApps;;.
+01-Apr-2018 13:13:55.936 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Initializing ProtocolHandler ["http-nio-8080"]
+01-Apr-2018 13:13:55.999 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Using a shared selector for servlet write/read
+01-Apr-2018 13:13:55.999 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Initializing ProtocolHandler ["ajp-nio-8009"]
+01-Apr-2018 13:13:55.999 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Using a shared selector for servlet write/read
+01-Apr-2018 13:13:56.140 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+01-Apr-2018 13:13:56.187 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> ********************************************************************************
+01-Apr-2018 13:13:56.187 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> OpenEJB http://tomee.apache.org/
+01-Apr-2018 13:13:56.187 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Startup: Sun Apr 01 13:13:56 EDT 2018
+01-Apr-2018 13:13:56.187 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Copyright 1999-2016 (C) Apache OpenEJB Project, All Rights Reserved.
+01-Apr-2018 13:13:56.187 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Version: 7.0.2
+01-Apr-2018 13:13:56.187 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Build date: 20161106
+01-Apr-2018 13:13:56.187 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Build time: 07:23
+01-Apr-2018 13:13:56.187 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> ********************************************************************************
+01-Apr-2018 13:13:56.187 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> openejb.home = E:\apache-tomee-webprofile-7.0.2
+01-Apr-2018 13:13:56.187 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> openejb.base = E:\apache-tomee-webprofile-7.0.2
+01-Apr-2018 13:13:56.187 INFO [main] org.apache.openejb.cdi.CdiBuilder.initializeOWB Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@3745e5c6
+01-Apr-2018 13:13:56.187 INFO [main] org.apache.openejb.cdi.CdiBuilder.initializeOWB Succeeded in installing singleton service
+01-Apr-2018 13:13:56.202 INFO [main] org.apache.openejb.config.ConfigurationFactory.init TomEE configuration file is 'E:\apache-tomee-webprofile-7.0.2\conf\tomee.xml'
+01-Apr-2018 13:13:56.234 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+01-Apr-2018 13:13:56.234 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+01-Apr-2018 13:13:56.234 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.deployments.classpath=false'
+01-Apr-2018 13:13:56.234 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating TransactionManager(id=Default Transaction Manager)
+01-Apr-2018 13:13:56.283 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating SecurityService(id=Tomcat Security Service)
+01-Apr-2018 13:13:56.313 INFO [main] org.apache.openejb.server.ServiceManager.initServer Creating ServerService(id=cxf-rs)
+01-Apr-2018 13:13:56.439 INFO [main] org.apache.openejb.server.SimpleServiceManager.start   ** Bound Services **
+01-Apr-2018 13:13:56.439 INFO [main] org.apache.openejb.server.SimpleServiceManager.printRow   NAME                 IP              PORT  
+01-Apr-2018 13:13:56.439 INFO [main] org.apache.openejb.server.SimpleServiceManager.start -------
+01-Apr-2018 13:13:56.439 INFO [main] org.apache.openejb.server.SimpleServiceManager.start Ready!
+01-Apr-2018 13:13:56.439 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Initialization processed in 814 ms
+01-Apr-2018 13:13:56.439 INFO [main] org.apache.tomee.catalina.OpenEJBNamingContextListener.bindResource Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
+01-Apr-2018 13:13:56.439 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=UserDatabase)
+01-Apr-2018 13:13:56.454 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Starting service Catalina
+01-Apr-2018 13:13:56.454 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Starting Servlet Engine: Apache Tomcat (TomEE)/8.5.6 (7.0.2)
+01-Apr-2018 13:13:56.454 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\mcqueen.xml
+01-Apr-2018 13:13:56.470 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /mcqueen
+01-Apr-2018 13:13:56.470 SEVERE [localhost-startStop-1] sun.reflect.NativeMethodAccessorImpl.invoke ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/mcqueen]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:724)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:700)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@688ad77d]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4842)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4974)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [F:\Master\Processed Information\Computer Science\NetbeansWorkSpace\interactive-quiz\mcqueen\target\mcqueen-1.0-SNAPSHOT] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:732)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 more
+
+01-Apr-2018 13:13:56.470 SEVERE [localhost-startStop-1] sun.reflect.NativeMethodAccessorImpl.invoke Error deploying configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\mcqueen.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/mcqueen]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:728)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:700)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+01-Apr-2018 13:13:56.470 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\mcqueen.xml has finished in 16 ms
+01-Apr-2018 13:13:56.470 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\maven.xml
+01-Apr-2018 13:13:56.517 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /maven
+01-Apr-2018 13:13:56.943 INFO [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT
+01-Apr-2018 13:13:57.759 INFO [localhost-startStop-1] org.apache.openejb.config.InitEjbDeployments.deploy Auto-deploying ejb ChapterFacade: EjbDeployment(deployment-id=ChapterFacade)
+01-Apr-2018 13:13:57.759 INFO [localhost-startStop-1] org.apache.openejb.config.InitEjbDeployments.deploy Auto-deploying ejb ExerciseFacade: EjbDeployment(deployment-id=ExerciseFacade)
+01-Apr-2018 13:13:57.759 INFO [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=maven-1.0-SNAPSHOT/DerbyLMS, type=Resource, provider-id=Default JDBC Database)
+01-Apr-2018 13:13:57.759 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=maven-1.0-SNAPSHOT/DerbyLMS)
+01-Apr-2018 13:13:57.853 INFO [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Stateless Container, type=Container, provider-id=Default Stateless Container)
+01-Apr-2018 13:13:57.853 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.createContainer Auto-creating a container for bean ChapterFacade: Container(type=STATELESS, id=Default Stateless Container)
+01-Apr-2018 13:13:57.853 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Container(id=Default Stateless Container)
+01-Apr-2018 13:13:57.870 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/maven-1.0-SNAPSHOT/DerbyLMS' in bean ChapterFacade to Resource(id=DerbyLMS)
+01-Apr-2018 13:13:57.871 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/DerbyLMS' in bean ChapterFacade to Resource(id=DerbyLMS)
+01-Apr-2018 13:13:57.871 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/maven-1.0-SNAPSHOT/DerbyLMS' in bean ExerciseFacade to Resource(id=DerbyLMS)
+01-Apr-2018 13:13:57.871 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/DerbyLMS' in bean ExerciseFacade to Resource(id=DerbyLMS)
+01-Apr-2018 13:13:57.872 INFO [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Managed Container, type=Container, provider-id=Default Managed Container)
+01-Apr-2018 13:13:57.872 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.createContainer Auto-creating a container for bean maven.Comp1542443004: Container(type=MANAGED, id=Default Managed Container)
+01-Apr-2018 13:13:57.872 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Container(id=Default Managed Container)
+01-Apr-2018 13:13:57.877 INFO [localhost-startStop-1] org.apache.openejb.core.managed.SimplePassivater.init Using directory E:\apache-tomee-webprofile-7.0.2\temp for stateful session passivation
+01-Apr-2018 13:13:57.882 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/maven-1.0-SNAPSHOT/DerbyLMS' in bean maven.Comp1542443004 to Resource(id=DerbyLMS)
+01-Apr-2018 13:13:57.882 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/DerbyLMS' in bean maven.Comp1542443004 to Resource(id=DerbyLMS)
+01-Apr-2018 13:13:57.883 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.deploy Configuring PersistenceUnit(name=lms_derby_PU)
+01-Apr-2018 13:13:57.883 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.logAutoCreateResource Auto-creating a Resource with id 'maven-1.0-SNAPSHOT/DerbyLMSNonJta' of type 'DataSource for 'lms_derby_PU'.
+01-Apr-2018 13:13:57.883 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.deploy Configuring Service(id=maven-1.0-SNAPSHOT/DerbyLMSNonJta, type=Resource, provider-id=maven-1.0-SNAPSHOT/DerbyLMS)
+01-Apr-2018 13:13:57.883 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=maven-1.0-SNAPSHOT/DerbyLMSNonJta)
+01-Apr-2018 13:13:57.913 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.setJtaDataSource Adjusting PersistenceUnit lms_derby_PU <jta-data-source> to Resource ID 'maven-1.0-SNAPSHOT/DerbyLMS' from 'DerbyLMS'
+01-Apr-2018 13:13:57.914 INFO [localhost-startStop-1] org.apache.openejb.config.AutoConfig.setNonJtaDataSource Adjusting PersistenceUnit lms_derby_PU <non-jta-data-source> to Resource ID 'maven-1.0-SNAPSHOT/DerbyLMSNonJta' from 'null'
+01-Apr-2018 13:13:57.918 INFO [localhost-startStop-1] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT" loaded.
+01-Apr-2018 13:13:57.934 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT
+01-Apr-2018 13:13:58.153 INFO [localhost-startStop-1] null.openjpa.Runtime OpenJPA dynamically loaded a validation provider.
+01-Apr-2018 13:13:58.169 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.ReloadableEntityManagerFactory.createDelegate PersistenceUnit(name=lms_derby_PU, provider=org.apache.openjpa.persistence.PersistenceProviderImpl) - provider time 215ms
+01-Apr-2018 13:13:58.231 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=ChapterFacadeLocalBean) --> Ejb(deployment-id=ChapterFacade)
+01-Apr-2018 13:13:58.231 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/maven/ChapterFacade!com.lms.maven.ejb.ChapterFacade) --> Ejb(deployment-id=ChapterFacade)
+01-Apr-2018 13:13:58.231 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/maven/ChapterFacade) --> Ejb(deployment-id=ChapterFacade)
+01-Apr-2018 13:13:58.231 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=ExerciseFacadeLocalBean) --> Ejb(deployment-id=ExerciseFacade)
+01-Apr-2018 13:13:58.231 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/maven/ExerciseFacade!com.lms.maven.ejb.ExerciseFacade) --> Ejb(deployment-id=ExerciseFacade)
+01-Apr-2018 13:13:58.231 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/maven/ExerciseFacade) --> Ejb(deployment-id=ExerciseFacade)
+01-Apr-2018 13:13:58.247 INFO [localhost-startStop-1] org.apache.openejb.cdi.CdiBuilder.initSingleton Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@3745e5c6
+01-Apr-2018 13:13:58.294 INFO [localhost-startStop-1] org.apache.openejb.cdi.OpenEJBLifecycle.startApplication OpenWebBeans Container is starting...
+01-Apr-2018 13:13:58.294 INFO [localhost-startStop-1] org.apache.webbeans.plugins.PluginLoader.startUp Adding OpenWebBeansPlugin : [CdiPlugin]
+01-Apr-2018 13:13:58.718 INFO [localhost-startStop-1] org.apache.openejb.cdi.CdiScanner.handleBda Using annotated mode for file:/E:/Master/Processed%20Information/Computer%20Science/NetbeansWorkSpace/checkexercisetool/maven/target/maven-1.0-SNAPSHOT/WEB-INF/beans.xml looking all classes to find CDI beans, maybe think to add a beans.xml if not there or add the jar to exclusions.list
+01-Apr-2018 13:13:59.346 INFO [localhost-startStop-1] org.apache.webbeans.config.BeansDeployer.validateInjectionPoints All injection points were validated successfully.
+01-Apr-2018 13:13:59.346 INFO [localhost-startStop-1] org.apache.openejb.cdi.OpenEJBLifecycle.startApplication OpenWebBeans Container has started, it took 1052 ms.
+01-Apr-2018 13:13:59.346 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.startEjbs Created Ejb(deployment-id=ChapterFacade, ejb-name=ChapterFacade, container=Default Stateless Container)
+01-Apr-2018 13:13:59.362 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.startEjbs Created Ejb(deployment-id=ExerciseFacade, ejb-name=ExerciseFacade, container=Default Stateless Container)
+01-Apr-2018 13:13:59.362 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=ChapterFacade, ejb-name=ChapterFacade, container=Default Stateless Container)
+01-Apr-2018 13:13:59.362 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=ExerciseFacade, ejb-name=ExerciseFacade, container=Default Stateless Container)
+01-Apr-2018 13:13:59.377 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT\META-INF\context.xml
+01-Apr-2018 13:13:59.377 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT)
+01-Apr-2018 13:13:59.881 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+01-Apr-2018 13:13:59.881 INFO [localhost-startStop-1] org.apache.tomee.myfaces.TomEEMyFacesContainerInitializer.addListener Installing <listener>org.apache.myfaces.webapp.StartupServletContextListener</listener>
+01-Apr-2018 13:13:59.944 INFO [localhost-startStop-1] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getStandardFacesConfig Reading standard config META-INF/standard-faces-config.xml
+01-Apr-2018 13:14:00.118 INFO [localhost-startStop-1] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getWebAppFacesConfig Reading config /WEB-INF/faces-config.xml
+01-Apr-2018 13:14:00.165 INFO [localhost-startStop-1] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getClassloaderFacesConfig Reading config : jar:file:/E:/apache-tomee-webprofile-7.0.2/lib/openwebbeans-el22-1.7.0.jar!/META-INF/faces-config.xml
+01-Apr-2018 13:14:00.165 INFO [localhost-startStop-1] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getClassloaderFacesConfig Reading config : jar:file:/E:/Master/Processed%20Information/Computer%20Science/NetbeansWorkSpace/checkexercisetool/maven/target/maven-1.0-SNAPSHOT/WEB-INF/lib/primefaces-extensions-6.2.3.jar!/META-INF/faces-config.xml
+01-Apr-2018 13:14:00.181 INFO [localhost-startStop-1] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getClassloaderFacesConfig Reading config : jar:file:/E:/Master/Processed%20Information/Computer%20Science/NetbeansWorkSpace/checkexercisetool/maven/target/maven-1.0-SNAPSHOT/WEB-INF/lib/primefaces-6.2.jar!/META-INF/faces-config.xml
+01-Apr-2018 13:14:00.212 INFO [localhost-startStop-1] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getClassloaderFacesConfig Reading config : jar:file:/E:/Master/Processed%20Information/Computer%20Science/NetbeansWorkSpace/checkexercisetool/maven/target/maven-1.0-SNAPSHOT/WEB-INF/lib/omnifaces-1.7.jar!/META-INF/faces-config.xml
+01-Apr-2018 13:14:00.212 INFO [localhost-startStop-1] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getClassloaderFacesConfig Reading config : jar:file:/E:/apache-tomee-webprofile-7.0.2/lib/openwebbeans-jsf-1.7.0.jar!/META-INF/faces-config.xml
+01-Apr-2018 13:14:00.368 INFO [localhost-startStop-1] org.apache.myfaces.config.LogMetaInfUtils.logArtifact Artifact 'myfaces-api' was found in version '2.2.11' from path 'file:/E:/apache-tomee-webprofile-7.0.2/lib/myfaces-api-2.2.11.jar'
+01-Apr-2018 13:14:00.368 INFO [localhost-startStop-1] org.apache.myfaces.config.LogMetaInfUtils.logArtifact Artifact 'myfaces-impl' was found in version '2.2.11' from path 'file:/E:/apache-tomee-webprofile-7.0.2/lib/myfaces-impl-2.2.11.jar'
+01-Apr-2018 13:14:00.368 INFO [localhost-startStop-1] org.apache.myfaces.util.ExternalSpecifications.isCDIAvailable MyFaces CDI support enabled
+01-Apr-2018 13:14:00.384 INFO [localhost-startStop-1] org.apache.myfaces.spi.impl.DefaultInjectionProviderFactory.getInjectionProvider Using InjectionProvider org.apache.myfaces.spi.impl.CDIAnnotationDelegateInjectionProvider
+01-Apr-2018 13:14:00.447 INFO [localhost-startStop-1] org.apache.myfaces.util.ExternalSpecifications.isBeanValidationAvailable MyFaces Bean Validation support enabled
+01-Apr-2018 13:14:00.621 INFO [localhost-startStop-1] org.apache.myfaces.config.FacesConfigurator.handleSerialFactory Serialization provider : class org.apache.myfaces.shared_impl.util.serial.DefaultSerialFactory
+01-Apr-2018 13:14:00.621 INFO [localhost-startStop-1] org.apache.myfaces.config.annotation.DefaultLifecycleProviderFactory.getLifecycleProvider Using LifecycleProvider org.apache.myfaces.config.annotation.Tomcat7AnnotationLifecycleProvider
+01-Apr-2018 13:14:00.715 INFO [localhost-startStop-1] org.primefaces.webapp.PostConstructApplicationEventListener.processEvent Running on PrimeFaces 6.2
+01-Apr-2018 13:14:00.715 INFO [localhost-startStop-1] org.primefaces.extensions.application.PostConstructApplicationEventListener.processEvent Running on PrimeFaces Extensions 6.2.3
+01-Apr-2018 13:14:00.715 INFO [localhost-startStop-1] org.omnifaces.VersionLoggerEventListener.processEvent Using OmniFaces version 1.7
+01-Apr-2018 13:14:00.715 INFO [localhost-startStop-1] org.apache.myfaces.webapp.AbstractFacesInitializer.initFaces ServletContext initialized.
+01-Apr-2018 13:14:00.715 INFO [localhost-startStop-1] org.apache.myfaces.util.ExternalSpecifications.isUnifiedELAvailable MyFaces Unified EL support enabled
+01-Apr-2018 13:14:00.715 WARNING [localhost-startStop-1] org.apache.myfaces.webapp.AbstractFacesInitializer.initFaces 
+
+*******************************************************************
+*** WARNING: Apache MyFaces-2 is running in DEVELOPMENT mode.   ***
+***                                         ^^^^^^^^^^^         ***
+*** Do NOT deploy to your live server(s) without changing this. ***
+*** See Application#getProjectStage() for more information.     ***
+*******************************************************************
+
+01-Apr-2018 13:14:00.715 INFO [localhost-startStop-1] org.apache.myfaces.webapp.StartupServletContextListener.contextInitialized MyFaces Core has started, it took [834] ms.
+01-Apr-2018 13:14:00.856 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\maven.xml has finished in 4,386 ms
+01-Apr-2018 13:14:00.856 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying web application directory E:\apache-tomee-webprofile-7.0.2\webapps\ROOT
+01-Apr-2018 13:14:00.856 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /
+01-Apr-2018 13:14:00.856 INFO [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: E:\apache-tomee-webprofile-7.0.2\webapps\ROOT
+01-Apr-2018 13:14:00.856 INFO [localhost-startStop-1] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "E:\apache-tomee-webprofile-7.0.2\webapps\ROOT" loaded.
+01-Apr-2018 13:14:00.856 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: E:\apache-tomee-webprofile-7.0.2\webapps\ROOT
+01-Apr-2018 13:14:00.872 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=E:\apache-tomee-webprofile-7.0.2\webapps\ROOT)
+01-Apr-2018 13:14:00.887 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of web application directory E:\apache-tomee-webprofile-7.0.2\webapps\ROOT has finished in 31 ms
+01-Apr-2018 13:14:00.887 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying web application directory E:\apache-tomee-webprofile-7.0.2\webapps\host-manager
+01-Apr-2018 13:14:00.887 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /host-manager
+01-Apr-2018 13:14:00.903 INFO [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: E:\apache-tomee-webprofile-7.0.2\webapps\host-manager
+01-Apr-2018 13:14:00.903 INFO [localhost-startStop-1] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "E:\apache-tomee-webprofile-7.0.2\webapps\host-manager" loaded.
+01-Apr-2018 13:14:00.903 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: E:\apache-tomee-webprofile-7.0.2\webapps\host-manager
+01-Apr-2018 13:14:00.903 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file E:\apache-tomee-webprofile-7.0.2\webapps\host-manager\META-INF\context.xml
+01-Apr-2018 13:14:00.903 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=E:\apache-tomee-webprofile-7.0.2\webapps\host-manager)
+01-Apr-2018 13:14:00.919 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of web application directory E:\apache-tomee-webprofile-7.0.2\webapps\host-manager has finished in 32 ms
+01-Apr-2018 13:14:00.919 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying web application directory E:\apache-tomee-webprofile-7.0.2\webapps\docs
+01-Apr-2018 13:14:00.919 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /docs
+01-Apr-2018 13:14:00.934 INFO [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: E:\apache-tomee-webprofile-7.0.2\webapps\docs
+01-Apr-2018 13:14:00.934 INFO [localhost-startStop-1] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "E:\apache-tomee-webprofile-7.0.2\webapps\docs" loaded.
+01-Apr-2018 13:14:00.934 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: E:\apache-tomee-webprofile-7.0.2\webapps\docs
+01-Apr-2018 13:14:00.934 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=E:\apache-tomee-webprofile-7.0.2\webapps\docs)
+01-Apr-2018 13:14:00.950 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of web application directory E:\apache-tomee-webprofile-7.0.2\webapps\docs has finished in 31 ms
+01-Apr-2018 13:14:00.950 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying web application directory E:\apache-tomee-webprofile-7.0.2\webapps\manager
+01-Apr-2018 13:14:00.950 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /manager
+01-Apr-2018 13:14:00.966 INFO [localhost-startStop-1] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: E:\apache-tomee-webprofile-7.0.2\webapps\manager
+01-Apr-2018 13:14:00.966 INFO [localhost-startStop-1] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "E:\apache-tomee-webprofile-7.0.2\webapps\manager" loaded.
+01-Apr-2018 13:14:00.966 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: E:\apache-tomee-webprofile-7.0.2\webapps\manager
+01-Apr-2018 13:14:00.966 INFO [localhost-startStop-1] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file E:\apache-tomee-webprofile-7.0.2\webapps\manager\META-INF\context.xml
+01-Apr-2018 13:14:00.966 INFO [localhost-startStop-1] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=E:\apache-tomee-webprofile-7.0.2\webapps\manager)
+01-Apr-2018 13:14:00.981 INFO [localhost-startStop-1] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of web application directory E:\apache-tomee-webprofile-7.0.2\webapps\manager has finished in 31 ms
+01-Apr-2018 13:14:00.997 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Starting ProtocolHandler [http-nio-8080]
+01-Apr-2018 13:14:00.997 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Starting ProtocolHandler [ajp-nio-8009]
+01-Apr-2018 13:14:00.997 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Server startup in 4553 ms
+01-Apr-2018 13:14:01.171 INFO [http-nio-8080-exec-8] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT
+01-Apr-2018 13:14:01.171 INFO [http-nio-8080-exec-8] org.apache.openejb.assembler.classic.Assembler.doResourceDestruction Closing DataSource: maven-1.0-SNAPSHOT/DerbyLMS
+01-Apr-2018 13:14:01.799 INFO [http-nio-8080-exec-8] sun.reflect.DelegatingMethodAccessorImpl.invoke Undeploying context [/maven]
+01-Apr-2018 13:14:01.877 INFO [http-nio-8080-exec-10] sun.reflect.DelegatingMethodAccessorImpl.invoke Deploying configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\maven.xml
+01-Apr-2018 13:14:01.877 INFO [http-nio-8080-exec-10] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /maven
+01-Apr-2018 13:14:02.162 INFO [http-nio-8080-exec-10] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT
+01-Apr-2018 13:14:02.774 INFO [http-nio-8080-exec-10] org.apache.openejb.config.InitEjbDeployments.deploy Auto-deploying ejb ChapterFacade: EjbDeployment(deployment-id=ChapterFacade)
+01-Apr-2018 13:14:02.774 INFO [http-nio-8080-exec-10] org.apache.openejb.config.InitEjbDeployments.deploy Auto-deploying ejb ExerciseFacade: EjbDeployment(deployment-id=ExerciseFacade)
+01-Apr-2018 13:14:02.774 INFO [http-nio-8080-exec-10] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=maven-1.0-SNAPSHOT/DerbyLMS, type=Resource, provider-id=Default JDBC Database)
+01-Apr-2018 13:14:02.774 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=maven-1.0-SNAPSHOT/DerbyLMS)
+01-Apr-2018 13:14:02.806 INFO [http-nio-8080-exec-10] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/maven-1.0-SNAPSHOT/DerbyLMS' in bean ChapterFacade to Resource(id=DerbyLMS)
+01-Apr-2018 13:14:02.806 INFO [http-nio-8080-exec-10] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/DerbyLMS' in bean ChapterFacade to Resource(id=DerbyLMS)
+01-Apr-2018 13:14:02.806 INFO [http-nio-8080-exec-10] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/maven-1.0-SNAPSHOT/DerbyLMS' in bean ExerciseFacade to Resource(id=DerbyLMS)
+01-Apr-2018 13:14:02.806 INFO [http-nio-8080-exec-10] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/DerbyLMS' in bean ExerciseFacade to Resource(id=DerbyLMS)
+01-Apr-2018 13:14:02.806 INFO [http-nio-8080-exec-10] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/maven-1.0-SNAPSHOT/DerbyLMS' in bean maven.Comp1595863882 to Resource(id=DerbyLMS)
+01-Apr-2018 13:14:02.806 INFO [http-nio-8080-exec-10] org.apache.openejb.config.AutoConfig.processResourceRef Auto-linking resource-ref 'openejb/Resource/DerbyLMS' in bean maven.Comp1595863882 to Resource(id=DerbyLMS)
+01-Apr-2018 13:14:02.806 INFO [http-nio-8080-exec-10] org.apache.openejb.config.AutoConfig.deploy Configuring PersistenceUnit(name=lms_derby_PU)
+01-Apr-2018 13:14:02.806 INFO [http-nio-8080-exec-10] org.apache.openejb.config.AutoConfig.setJtaDataSource Adjusting PersistenceUnit lms_derby_PU <jta-data-source> to Resource ID 'maven-1.0-SNAPSHOT/DerbyLMS' from 'DerbyLMS'
+01-Apr-2018 13:14:02.806 INFO [http-nio-8080-exec-10] org.apache.openejb.config.AutoConfig.setNonJtaDataSource Adjusting PersistenceUnit lms_derby_PU <non-jta-data-source> to Resource ID 'maven-1.0-SNAPSHOT/DerbyLMSNonJta' from 'null'
+01-Apr-2018 13:14:02.806 INFO [http-nio-8080-exec-10] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT" loaded.
+01-Apr-2018 13:14:02.806 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT
+01-Apr-2018 13:14:02.821 INFO [http-nio-8080-exec-10] null.openjpa.Runtime OpenJPA dynamically loaded a validation provider.
+01-Apr-2018 13:14:02.821 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.ReloadableEntityManagerFactory.createDelegate PersistenceUnit(name=lms_derby_PU, provider=org.apache.openjpa.persistence.PersistenceProviderImpl) - provider time 13ms
+01-Apr-2018 13:14:02.853 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=ChapterFacadeLocalBean) --> Ejb(deployment-id=ChapterFacade)
+01-Apr-2018 13:14:02.853 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/maven/ChapterFacade!com.lms.maven.ejb.ChapterFacade) --> Ejb(deployment-id=ChapterFacade)
+01-Apr-2018 13:14:02.853 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/maven/ChapterFacade) --> Ejb(deployment-id=ChapterFacade)
+01-Apr-2018 13:14:02.853 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=ExerciseFacadeLocalBean) --> Ejb(deployment-id=ExerciseFacade)
+01-Apr-2018 13:14:02.853 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/maven/ExerciseFacade!com.lms.maven.ejb.ExerciseFacade) --> Ejb(deployment-id=ExerciseFacade)
+01-Apr-2018 13:14:02.853 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/maven/ExerciseFacade) --> Ejb(deployment-id=ExerciseFacade)
+01-Apr-2018 13:14:02.868 INFO [http-nio-8080-exec-10] org.apache.openejb.cdi.CdiBuilder.initSingleton Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@3745e5c6
+01-Apr-2018 13:14:02.868 INFO [http-nio-8080-exec-10] org.apache.openejb.cdi.OpenEJBLifecycle.startApplication OpenWebBeans Container is starting...
+01-Apr-2018 13:14:03.246 INFO [http-nio-8080-exec-10] org.apache.openejb.cdi.CdiScanner.handleBda Using annotated mode for file:/E:/Master/Processed%20Information/Computer%20Science/NetbeansWorkSpace/checkexercisetool/maven/target/maven-1.0-SNAPSHOT/WEB-INF/beans.xml looking all classes to find CDI beans, maybe think to add a beans.xml if not there or add the jar to exclusions.list
+01-Apr-2018 13:14:03.575 INFO [http-nio-8080-exec-10] org.apache.openejb.cdi.OpenEJBLifecycle.startApplication OpenWebBeans Container has started, it took 707 ms.
+01-Apr-2018 13:14:03.575 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.Assembler.startEjbs Created Ejb(deployment-id=ChapterFacade, ejb-name=ChapterFacade, container=Default Stateless Container)
+01-Apr-2018 13:14:03.575 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.Assembler.startEjbs Created Ejb(deployment-id=ExerciseFacade, ejb-name=ExerciseFacade, container=Default Stateless Container)
+01-Apr-2018 13:14:03.575 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=ChapterFacade, ejb-name=ChapterFacade, container=Default Stateless Container)
+01-Apr-2018 13:14:03.575 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=ExerciseFacade, ejb-name=ExerciseFacade, container=Default Stateless Container)
+01-Apr-2018 13:14:03.575 INFO [http-nio-8080-exec-10] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT\META-INF\context.xml
+01-Apr-2018 13:14:03.575 INFO [http-nio-8080-exec-10] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT)
+01-Apr-2018 13:14:03.968 INFO [http-nio-8080-exec-10] org.apache.tomee.myfaces.TomEEMyFacesContainerInitializer.addListener Installing <listener>org.apache.myfaces.webapp.StartupServletContextListener</listener>
+01-Apr-2018 13:14:04.487 INFO [http-nio-8080-exec-10] org.primefaces.webapp.PostConstructApplicationEventListener.processEvent Running on PrimeFaces 6.2
+01-Apr-2018 13:14:04.487 INFO [http-nio-8080-exec-10] org.primefaces.extensions.application.PostConstructApplicationEventListener.processEvent Running on PrimeFaces Extensions 6.2.3
+01-Apr-2018 13:14:04.487 INFO [http-nio-8080-exec-10] org.omnifaces.VersionLoggerEventListener.processEvent Using OmniFaces version 1.7
+01-Apr-2018 13:14:04.518 INFO [http-nio-8080-exec-10] sun.reflect.DelegatingMethodAccessorImpl.invoke Deployment of configuration descriptor E:\apache-tomee-webprofile-7.0.2\conf\Catalina\localhost\maven.xml has finished in 2,641 ms
+01-Apr-2018 13:14:04.518 INFO [http-nio-8080-exec-11] sun.reflect.DelegatingMethodAccessorImpl.invoke The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/maven]] after start() had already been called. The second call will be ignored.
+01-Apr-2018 13:14:04.961 INFO [http-nio-8080-exec-6] javax.faces.component._ExternalSpecifications.isBeanValidationAvailable MyFaces Bean Validation support enabled
+01-Apr-2018 13:14:05.078 INFO [http-nio-8080-exec-6] null.openjpa.Runtime Starting OpenJPA 2.4.1
+01-Apr-2018 13:14:05.116 INFO [http-nio-8080-exec-6] null.openjpa.jdbc.JDBC Using dictionary class "org.apache.openjpa.jdbc.sql.DerbyDictionary" (Apache Derby 10.11.1.2 - (1629631) ,Apache Derby Network Client JDBC Driver 10.11.1.2 - (1629631)).
+01-Apr-2018 13:14:05.139 INFO [http-nio-8080-exec-6] null.openjpa.jdbc.JDBC Connected to Apache Derby version 10.10 using JDBC driver Apache Derby Network Client JDBC Driver version 10.11.1.2 - (1629631). 
+01-Apr-2018 14:38:41.146 WARNING [http-nio-8080-exec-17] org.apache.myfaces.renderkit.html.HtmlLabelRenderer.encodeBegin Attribute 'for' of label component with id exerCheckForm:j_id_q is not defined
+01-Apr-2018 16:11:21.615 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+01-Apr-2018 16:11:21.615 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Pausing ProtocolHandler ["http-nio-8080"]
+01-Apr-2018 16:11:21.678 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Pausing ProtocolHandler ["ajp-nio-8009"]
+01-Apr-2018 16:11:21.740 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Stopping service Catalina
+01-Apr-2018 16:11:21.756 INFO [localhost-startStop-2] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: E:\apache-tomee-webprofile-7.0.2\webapps\ROOT
+01-Apr-2018 16:11:21.880 INFO [localhost-startStop-2] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: E:\apache-tomee-webprofile-7.0.2\webapps\host-manager
+01-Apr-2018 16:11:22.037 INFO [localhost-startStop-2] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: E:\apache-tomee-webprofile-7.0.2\webapps\docs
+01-Apr-2018 16:11:22.131 INFO [localhost-startStop-2] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: E:\apache-tomee-webprofile-7.0.2\webapps\manager
+01-Apr-2018 16:11:22.250 INFO [localhost-startStop-2] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\checkexercisetool\maven\target\maven-1.0-SNAPSHOT
+01-Apr-2018 16:11:22.266 INFO [localhost-startStop-2] org.apache.openejb.assembler.classic.Assembler.doResourceDestruction Closing DataSource: maven-1.0-SNAPSHOT/DerbyLMS
+01-Apr-2018 16:11:22.397 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Stopping ProtocolHandler ["http-nio-8080"]
+01-Apr-2018 16:11:22.397 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Stopping ProtocolHandler ["ajp-nio-8009"]
+01-Apr-2018 16:11:22.397 INFO [main] org.apache.openejb.server.SimpleServiceManager.stop Stopping server services
+01-Apr-2018 16:11:22.397 INFO [main] org.apache.openejb.assembler.classic.Assembler.doResourceDestruction Closing DataSource: maven-1.0-SNAPSHOT/DerbyLMSNonJta
+01-Apr-2018 16:11:22.397 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Destroying ProtocolHandler ["http-nio-8080"]
+01-Apr-2018 16:11:22.413 INFO [main] sun.reflect.DelegatingMethodAccessorImpl.invoke Destroying ProtocolHandler ["ajp-nio-8009"]

@@ -1,0 +1,772 @@
+23-Mar-2018 20:42:56.892 INFO [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+23-Mar-2018 20:42:56.892 INFO [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+23-Mar-2018 20:42:56.892 INFO [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:42:57.063 INFO [http-nio-8080-exec-8] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:42:57.501 INFO [http-nio-8080-exec-10] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context5427791616902933618.xml'
+23-Mar-2018 20:43:01.038 INFO [http-nio-8080-exec-3] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 20:51:29.936 INFO [http-nio-8080-exec-9] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+23-Mar-2018 20:51:29.948 INFO [http-nio-8080-exec-9] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+23-Mar-2018 20:51:29.952 INFO [http-nio-8080-exec-9] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:51:30.281 INFO [http-nio-8080-exec-10] org.apache.catalina.core.ApplicationContext.log Manager: stop: Stopping web application '/maven'
+23-Mar-2018 20:51:32.099 INFO [http-nio-8080-exec-8] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 20:51:33.821 SEVERE [56] org.apache.catalina.core.ApplicationContext.log FAIL - Application at context path /maven could not be started
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/maven]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.manager.ManagerServlet.start(ManagerServlet.java:1307)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:358)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:589)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.tomee.catalina.OpenEJBSecurityListener$RequestCapturer.invoke(OpenEJBSecurityListener.java:97)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.tomee.catalina.TomEERuntimeException: org.apache.xbean.propertyeditor.PropertyEditorException: Unable to resolve class com.mysql.jdbc.Driver
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal(TomcatWebAppBuilder.java:1310)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.configureStart(TomcatWebAppBuilder.java:1124)
+	at org.apache.tomee.catalina.GlobalListenerSupport.lifecycleEvent(GlobalListenerSupport.java:133)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5087)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 33 more
+Caused by: org.apache.xbean.propertyeditor.PropertyEditorException: Unable to resolve class com.mysql.jdbc.Driver
+	at org.apache.xbean.propertyeditor.ClassEditor.toObjectImpl(ClassEditor.java:43)
+	at org.apache.xbean.propertyeditor.AbstractConverter.toObject(AbstractConverter.java:86)
+	at org.apache.xbean.propertyeditor.PropertyEditors.getValue(PropertyEditors.java:284)
+	at org.apache.xbean.recipe.RecipeHelper.convert(RecipeHelper.java:181)
+	at org.apache.xbean.recipe.ObjectRecipe.extractConstructorArgs(ObjectRecipe.java:592)
+	at org.apache.xbean.recipe.ObjectRecipe.internalCreate(ObjectRecipe.java:275)
+	at org.apache.xbean.recipe.AbstractRecipe.create(AbstractRecipe.java:96)
+	at org.apache.xbean.recipe.AbstractRecipe.create(AbstractRecipe.java:61)
+	at org.apache.openejb.assembler.classic.Assembler.doCreateResource(Assembler.java:2969)
+	at org.apache.openejb.assembler.classic.Assembler.createResource(Assembler.java:2802)
+	at org.apache.openejb.config.ConfigurationFactory.doInstall(ConfigurationFactory.java:466)
+	at org.apache.openejb.config.ConfigurationFactory.install(ConfigurationFactory.java:459)
+	at org.apache.openejb.config.AutoConfig.installResource(AutoConfig.java:2182)
+	at org.apache.openejb.config.AutoConfig.processApplicationResources(AutoConfig.java:1022)
+	at org.apache.openejb.config.AutoConfig.deploy(AutoConfig.java:190)
+	at org.apache.openejb.config.ConfigurationFactory$Chain.deploy(ConfigurationFactory.java:420)
+	at org.apache.openejb.config.ConfigurationFactory.configureApplication(ConfigurationFactory.java:1037)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal(TomcatWebAppBuilder.java:1276)
+	... 38 more
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1285)
+	at org.apache.tomee.catalina.TomEEWebappClassLoader.loadClass(TomEEWebappClassLoader.java:204)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1119)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.xbean.propertyeditor.ClassEditor.toObjectImpl(ClassEditor.java:40)
+	... 55 more
+
+23-Mar-2018 20:51:35.603 INFO [http-nio-8080-exec-9] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:51:35.666 INFO [http-nio-8080-exec-3] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:51:36.101 INFO [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context3657803524787330959.xml'
+23-Mar-2018 20:51:38.310 INFO [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 20:52:21.876 INFO [http-nio-8080-exec-18] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:52:22.671 INFO [http-nio-8080-exec-7] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 20:52:32.542 INFO [http-nio-8080-exec-19] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:52:32.887 INFO [http-nio-8080-exec-20] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 20:52:32.887 SEVERE [http-nio-8080-exec-20] org.apache.catalina.core.ApplicationContext.log Manager: ManagerServlet.reload[/maven]
+ java.lang.IllegalStateException: Context with name [/maven] has not yet been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3764)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1006)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:346)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:589)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.tomee.catalina.OpenEJBSecurityListener$RequestCapturer.invoke(OpenEJBSecurityListener.java:97)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+23-Mar-2018 20:53:42.388 INFO [59] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:53:42.784 INFO [http-nio-8080-exec-25] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:53:43.175 INFO [http-nio-8080-exec-21] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:53:43.597 INFO [67] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context5065372473971160262.xml'
+23-Mar-2018 20:53:44.446 INFO [http-nio-8080-exec-19] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:53:46.414 INFO [62] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 20:53:46.414 SEVERE [62] org.apache.catalina.core.ApplicationContext.log Manager: ManagerServlet.reload[/maven]
+ java.lang.IllegalStateException: Context with name [/maven] has not yet been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3764)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1006)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:346)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:589)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.tomee.catalina.OpenEJBSecurityListener$RequestCapturer.invoke(OpenEJBSecurityListener.java:97)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+23-Mar-2018 20:53:56.081 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:53:56.112 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:53:56.272 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:53:56.737 INFO [http-nio-8080-exec-21] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context686910039039116666.xml'
+23-Mar-2018 20:53:57.049 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:53:57.158 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:53:57.252 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:53:57.549 INFO [http-nio-8080-exec-20] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context52746974193427409.xml'
+23-Mar-2018 20:54:37.501 INFO [http-nio-8080-exec-20] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:54:37.657 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:54:38.048 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:54:38.907 INFO [70] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context7671564795719206224.xml'
+23-Mar-2018 20:54:39.564 INFO [http-nio-8080-exec-20] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:54:39.595 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:54:39.895 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:54:40.583 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context663391702852801920.xml'
+23-Mar-2018 20:55:01.184 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:55:01.465 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:55:01.731 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:55:02.465 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4921403593544114217.xml'
+23-Mar-2018 20:55:02.966 INFO [75] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:55:02.987 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:55:03.076 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:55:03.882 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4010062326179590611.xml'
+23-Mar-2018 20:55:10.321 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:55:10.383 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:55:10.461 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:55:11.102 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6189069018169822395.xml'
+23-Mar-2018 20:55:12.138 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:55:12.229 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:55:12.496 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:55:13.278 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context931354998506652444.xml'
+23-Mar-2018 20:56:32.458 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:56:32.476 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:56:32.601 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:56:33.215 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4476002979068795833.xml'
+23-Mar-2018 20:56:37.057 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:56:37.072 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:56:37.159 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:56:37.635 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context2197860552296193207.xml'
+23-Mar-2018 20:56:51.800 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:56:52.021 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:56:52.160 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:56:53.460 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4335576860739577222.xml'
+23-Mar-2018 20:56:53.900 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:56:53.920 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:56:53.998 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:56:54.513 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6467365330805308765.xml'
+23-Mar-2018 20:56:59.704 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:56:59.720 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:56:59.860 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:57:00.673 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context5884039302345460232.xml'
+23-Mar-2018 20:57:01.204 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:57:01.267 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:57:01.345 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:57:02.157 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context2959365417445143840.xml'
+23-Mar-2018 20:57:09.595 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:57:09.692 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:57:09.787 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:57:10.172 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context722950703632020490.xml'
+23-Mar-2018 20:57:12.215 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:57:12.232 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:57:12.373 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:57:13.032 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context3982781564522732726.xml'
+23-Mar-2018 20:58:12.566 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:58:12.741 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:58:12.866 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:58:13.272 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6286334305349181983.xml'
+23-Mar-2018 20:58:13.600 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:58:14.101 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:58:14.221 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:58:15.128 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4807670209121496550.xml'
+23-Mar-2018 20:58:28.213 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:58:28.228 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:58:28.347 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:58:30.452 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context5668391827219134019.xml'
+23-Mar-2018 20:58:30.740 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:58:30.756 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:58:30.834 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:58:31.220 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6655031544019945067.xml'
+23-Mar-2018 20:59:09.864 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:09.973 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:10.208 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:59:11.239 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context2008904682905512530.xml'
+23-Mar-2018 20:59:11.677 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:12.130 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:12.364 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:59:13.021 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6310602354620522353.xml'
+23-Mar-2018 20:59:21.983 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:22.014 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:22.311 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:59:22.858 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1482942408883240148.xml'
+23-Mar-2018 20:59:23.185 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:23.230 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:23.340 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:59:23.961 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context3065355667259264782.xml'
+23-Mar-2018 20:59:44.938 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:45.473 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:45.668 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:59:46.425 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6897510645936327620.xml'
+23-Mar-2018 20:59:46.730 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:46.774 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:46.853 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:59:47.254 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4688778427660948157.xml'
+23-Mar-2018 20:59:55.685 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:55.951 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:56.076 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:59:56.560 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4070218851235833056.xml'
+23-Mar-2018 20:59:56.904 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:56.935 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 20:59:56.998 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 20:59:57.357 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context401169928003213572.xml'
+23-Mar-2018 21:00:26.979 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:00:27.010 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:00:27.136 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:00:27.480 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1814508935753779068.xml'
+23-Mar-2018 21:00:28.104 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:00:28.120 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:00:28.182 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:00:28.542 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6890978474958374465.xml'
+23-Mar-2018 21:00:31.468 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:00:31.562 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:00:31.640 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:00:31.976 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context2371118387347603390.xml'
+23-Mar-2018 21:00:32.232 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:00:32.245 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:00:32.323 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:00:32.699 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1420463481680366130.xml'
+23-Mar-2018 21:01:50.062 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:01:50.139 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:01:50.349 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:01:50.725 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context8558191319792821830.xml'
+23-Mar-2018 21:01:51.335 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:01:51.350 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:01:51.600 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:01:51.928 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context5483763839098663929.xml'
+23-Mar-2018 21:01:52.210 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:01:52.627 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:01:52.737 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:01:53.205 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1454490539791924860.xml'
+23-Mar-2018 21:01:53.487 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:01:53.502 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:01:53.612 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:01:55.014 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context5077532273072405429.xml'
+23-Mar-2018 21:01:55.326 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:01:55.420 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:01:55.498 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:01:56.048 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4790607142097725738.xml'
+23-Mar-2018 21:01:59.368 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:01:59.415 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:01:59.524 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:02:03.462 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6212866708443648959.xml'
+23-Mar-2018 21:02:03.955 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:02:03.971 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:02:05.319 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1504016711642166507.xml'
+23-Mar-2018 21:03:03.908 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:03:03.971 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:03:04.411 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context291990903872084432.xml'
+23-Mar-2018 21:03:05.332 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:03:05.332 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:03:05.975 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4240840892573783534.xml'
+23-Mar-2018 21:03:07.977 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:03:07.993 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:03:08.446 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context7430183883497907073.xml'
+23-Mar-2018 21:03:09.040 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:03:09.118 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:03:09.514 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context5281804075748759744.xml'
+23-Mar-2018 21:03:20.165 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:03:20.196 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:03:20.758 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context619491582591574982.xml'
+23-Mar-2018 21:03:21.087 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:03:21.102 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:03:21.508 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context8015830671228041641.xml'
+23-Mar-2018 21:04:06.497 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:04:06.560 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:04:07.388 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context2847131078906195758.xml'
+23-Mar-2018 21:04:08.075 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:04:08.106 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:04:08.700 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4004215883601464052.xml'
+23-Mar-2018 21:04:58.815 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:04:58.987 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:04:59.362 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1028709112684815856.xml'
+23-Mar-2018 21:04:59.675 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:04:59.706 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:05:00.081 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context8656888711838176937.xml'
+23-Mar-2018 21:05:23.692 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:05:23.707 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:05:24.199 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context9204209675295209075.xml'
+23-Mar-2018 21:05:24.624 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:05:25.019 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:05:25.423 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context2474497597592007015.xml'
+23-Mar-2018 21:05:56.364 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:05:56.895 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:05:57.192 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4078306606382080594.xml'
+23-Mar-2018 21:05:57.517 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:05:57.534 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:05:58.575 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context9154560236136191559.xml'
+23-Mar-2018 21:06:52.054 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:06:52.274 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:06:53.319 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4917271410172977439.xml'
+23-Mar-2018 21:06:59.281 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:06:59.328 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:06:59.918 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context3629867023386492608.xml'
+23-Mar-2018 21:07:02.715 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:07:02.731 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:07:03.590 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context2737318719247562711.xml'
+23-Mar-2018 21:07:05.860 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:07:05.990 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:07:07.335 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context5028974900615691065.xml'
+23-Mar-2018 21:07:09.075 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:07:09.075 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:07:10.181 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6763470323001519522.xml'
+23-Mar-2018 21:08:32.576 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:08:32.607 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:08:33.232 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context8894698244705848539.xml'
+23-Mar-2018 21:08:33.654 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:08:33.669 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:08:34.216 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context9169549564572199572.xml'
+23-Mar-2018 21:09:29.069 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:09:29.091 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:11:16.771 INFO [http-nio-8080-exec-7] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+23-Mar-2018 21:11:16.802 INFO [http-nio-8080-exec-7] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+23-Mar-2018 21:11:16.802 INFO [http-nio-8080-exec-7] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:11:16.818 INFO [http-nio-8080-exec-10] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:11:16.941 INFO [http-nio-8080-exec-13] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:11:18.994 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context5959988391468011170.xml'
+23-Mar-2018 21:11:25.844 INFO [http-nio-8080-exec-14] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 21:17:33.527 INFO [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+23-Mar-2018 21:17:33.528 INFO [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+23-Mar-2018 21:17:33.539 INFO [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:17:33.563 INFO [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:17:33.609 INFO [http-nio-8080-exec-7] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:17:34.372 INFO [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:17:34.434 INFO [http-nio-8080-exec-1] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:20:41.310 INFO [http-nio-8080-exec-4] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+23-Mar-2018 21:20:41.326 INFO [http-nio-8080-exec-4] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+23-Mar-2018 21:20:41.326 INFO [http-nio-8080-exec-4] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:20:41.357 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:20:41.623 INFO [http-nio-8080-exec-4] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:20:41.669 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:24:29.742 INFO [http-nio-8080-exec-8] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:24:29.804 INFO [http-nio-8080-exec-3] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:24:30.273 INFO [http-nio-8080-exec-9] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1754884059693011990.xml'
+23-Mar-2018 21:25:06.566 INFO [http-nio-8080-exec-9] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 21:27:04.264 INFO [http-nio-8080-exec-1] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:27:04.311 INFO [http-nio-8080-exec-4] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:27:04.389 INFO [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:27:07.514 INFO [http-nio-8080-exec-7] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6330111974847662461.xml'
+23-Mar-2018 21:27:17.981 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 21:38:38.151 INFO [http-nio-8080-exec-13] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:38:39.965 INFO [http-nio-8080-exec-17] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:39:11.898 INFO [http-nio-8080-exec-13] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:39:11.910 INFO [http-nio-8080-exec-21] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:39:12.209 INFO [http-nio-8080-exec-11] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 21:39:16.245 INFO [http-nio-8080-exec-16] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1563600801578226801.xml'
+23-Mar-2018 21:39:34.565 INFO [http-nio-8080-exec-20] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 21:39:35.872 INFO [68] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:39:37.565 INFO [http-nio-8080-exec-22] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:39:54.951 INFO [http-nio-8080-exec-12] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:39:56.811 INFO [http-nio-8080-exec-23] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:40:16.069 INFO [http-nio-8080-exec-12] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:40:17.937 INFO [http-nio-8080-exec-20] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:40:32.545 INFO [http-nio-8080-exec-15] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:40:33.773 INFO [http-nio-8080-exec-12] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:41:30.705 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:41:32.219 INFO [http-nio-8080-exec-28] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:41:52.171 INFO [http-nio-8080-exec-25] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:41:57.075 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:43:01.502 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:43:02.758 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:43:16.250 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:43:17.482 INFO [http-nio-8080-exec-36] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:43:28.782 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:43:30.508 INFO [http-nio-8080-exec-38] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:43:42.656 INFO [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:43:44.100 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:45:32.676 INFO [http-nio-8080-exec-37] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:45:34.303 INFO [http-nio-8080-exec-18] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:45:52.512 INFO [http-nio-8080-exec-37] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:45:54.743 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:46:13.934 INFO [http-nio-8080-exec-42] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:46:15.935 INFO [http-nio-8080-exec-37] org.apache.catalina.core.ApplicationContext.log Manager: stop: Stopping web application '/maven'
+23-Mar-2018 21:46:19.374 INFO [http-nio-8080-exec-49] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 21:46:35.127 INFO [http-nio-8080-exec-46] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:46:36.588 INFO [http-nio-8080-exec-44] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:46:58.152 INFO [http-nio-8080-exec-48] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:46:59.871 INFO [http-nio-8080-exec-50] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:47:18.341 INFO [http-nio-8080-exec-48] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:47:19.703 INFO [http-nio-8080-exec-52] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:47:34.703 INFO [147] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:47:36.470 INFO [http-nio-8080-exec-51] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:47:50.440 INFO [http-nio-8080-exec-56] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:47:51.869 INFO [http-nio-8080-exec-57] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:48:31.346 INFO [http-nio-8080-exec-59] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:48:33.680 INFO [http-nio-8080-exec-54] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:48:55.836 INFO [http-nio-8080-exec-58] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:48:57.724 INFO [http-nio-8080-exec-59] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:49:12.957 INFO [http-nio-8080-exec-58] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:49:15.261 INFO [http-nio-8080-exec-61] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:49:30.558 INFO [173] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:49:33.504 INFO [http-nio-8080-exec-62] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:49:43.060 INFO [http-nio-8080-exec-60] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:49:44.865 INFO [http-nio-8080-exec-55] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:49:53.962 INFO [http-nio-8080-exec-66] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:49:55.246 INFO [http-nio-8080-exec-65] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:51:10.254 INFO [http-nio-8080-exec-42] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:51:10.765 INFO [http-nio-8080-exec-71] org.apache.catalina.core.ApplicationContext.log Manager: stop: Stopping web application '/maven'
+23-Mar-2018 21:51:11.878 INFO [http-nio-8080-exec-74] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 21:51:22.696 INFO [http-nio-8080-exec-60] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:51:23.243 INFO [http-nio-8080-exec-69] org.apache.catalina.core.ApplicationContext.log Manager: stop: Stopping web application '/maven'
+23-Mar-2018 21:51:24.932 INFO [http-nio-8080-exec-75] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 21:51:57.257 INFO [http-nio-8080-exec-77] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:51:58.541 INFO [http-nio-8080-exec-67] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:52:16.128 INFO [http-nio-8080-exec-76] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:52:17.405 INFO [http-nio-8080-exec-70] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:52:28.730 INFO [http-nio-8080-exec-63] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:52:30.668 INFO [http-nio-8080-exec-60] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:52:45.687 INFO [http-nio-8080-exec-74] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:52:48.300 INFO [http-nio-8080-exec-77] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:52:59.815 INFO [http-nio-8080-exec-78] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:53:01.032 INFO [http-nio-8080-exec-63] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:53:13.217 INFO [http-nio-8080-exec-74] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:53:15.495 INFO [http-nio-8080-exec-83] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:54:03.595 INFO [http-nio-8080-exec-88] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:54:05.392 INFO [http-nio-8080-exec-89] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:54:18.991 INFO [http-nio-8080-exec-87] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:54:20.145 INFO [http-nio-8080-exec-92] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:54:56.759 INFO [http-nio-8080-exec-91] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:54:57.976 INFO [http-nio-8080-exec-93] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:55:06.541 INFO [http-nio-8080-exec-96] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:55:07.834 INFO [http-nio-8080-exec-97] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:56:12.440 INFO [http-nio-8080-exec-84] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:56:13.800 INFO [http-nio-8080-exec-94] org.apache.catalina.core.ApplicationContext.log Manager: stop: Stopping web application '/maven'
+23-Mar-2018 21:56:15.543 INFO [http-nio-8080-exec-104] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 21:56:25.707 INFO [http-nio-8080-exec-101] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:56:27.532 INFO [http-nio-8080-exec-84] org.apache.catalina.core.ApplicationContext.log Manager: stop: Stopping web application '/maven'
+23-Mar-2018 21:56:29.986 INFO [http-nio-8080-exec-103] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 21:56:36.469 INFO [http-nio-8080-exec-107] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:56:37.870 INFO [http-nio-8080-exec-95] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 21:58:34.100 INFO [http-nio-8080-exec-108] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 21:58:34.626 INFO [http-nio-8080-exec-113] org.apache.catalina.core.ApplicationContext.log Manager: stop: Stopping web application '/maven'
+23-Mar-2018 21:58:35.890 INFO [http-nio-8080-exec-110] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 22:01:34.129 INFO [http-nio-8080-exec-108] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:01:34.646 INFO [http-nio-8080-exec-122] org.apache.catalina.core.ApplicationContext.log Manager: stop: Stopping web application '/maven'
+23-Mar-2018 22:01:36.393 INFO [http-nio-8080-exec-123] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 22:01:45.622 INFO [http-nio-8080-exec-118] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:01:46.160 INFO [http-nio-8080-exec-126] org.apache.catalina.core.ApplicationContext.log Manager: stop: Stopping web application '/maven'
+23-Mar-2018 22:01:49.101 INFO [http-nio-8080-exec-120] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 22:03:19.932 INFO [http-nio-8080-exec-124] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:03:21.099 INFO [http-nio-8080-exec-131] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:03:33.012 INFO [http-nio-8080-exec-132] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:03:36.270 INFO [http-nio-8080-exec-124] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:05:20.850 INFO [http-nio-8080-exec-135] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:05:22.927 INFO [http-nio-8080-exec-139] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:05:33.761 INFO [http-nio-8080-exec-101] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:05:34.822 INFO [http-nio-8080-exec-135] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:07:13.561 INFO [http-nio-8080-exec-147] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:07:14.062 INFO [http-nio-8080-exec-148] org.apache.catalina.core.ApplicationContext.log Manager: stop: Stopping web application '/maven'
+23-Mar-2018 22:07:15.491 INFO [http-nio-8080-exec-146] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 22:08:16.131 INFO [http-nio-8080-exec-154] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:08:16.580 INFO [http-nio-8080-exec-155] org.apache.catalina.core.ApplicationContext.log Manager: stop: Stopping web application '/maven'
+23-Mar-2018 22:08:17.769 INFO [http-nio-8080-exec-137] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'
+23-Mar-2018 22:13:20.198 INFO [http-nio-8080-exec-163] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:13:23.060 INFO [http-nio-8080-exec-164] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:13:35.615 INFO [http-nio-8080-exec-165] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:13:37.368 INFO [http-nio-8080-exec-162] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:13:47.987 INFO [http-nio-8080-exec-160] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:13:49.301 INFO [http-nio-8080-exec-166] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:13:58.342 INFO [http-nio-8080-exec-160] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:13:59.459 INFO [http-nio-8080-exec-163] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:17:56.097 INFO [368] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:17:57.592 INFO [http-nio-8080-exec-169] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:18:09.274 INFO [http-nio-8080-exec-171] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:18:10.299 INFO [http-nio-8080-exec-176] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:24:25.894 INFO [http-nio-8080-exec-186] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:24:28.644 INFO [http-nio-8080-exec-187] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:24:38.135 INFO [http-nio-8080-exec-184] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:24:39.441 INFO [http-nio-8080-exec-182] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:25:29.171 INFO [http-nio-8080-exec-191] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:25:30.203 INFO [http-nio-8080-exec-192] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:25:38.241 INFO [http-nio-8080-exec-191] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:25:39.371 INFO [http-nio-8080-exec-190] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:31:21.510 INFO [http-nio-8080-exec-196] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:31:23.276 INFO [http-nio-8080-exec-197] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:31:39.940 INFO [http-nio-8080-exec-204] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:31:40.931 INFO [http-nio-8080-exec-203] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:31:53.264 INFO [http-nio-8080-exec-198] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:31:54.889 INFO [http-nio-8080-exec-201] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:31:58.842 INFO [http-nio-8080-exec-204] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:32:00.114 INFO [http-nio-8080-exec-198] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:32:00.114 SEVERE [http-nio-8080-exec-198] org.apache.catalina.core.ApplicationContext.log Manager: ManagerServlet.reload[/maven]
+ java.lang.IllegalStateException: Context with name [/maven] has not yet been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3764)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1006)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:346)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:589)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.tomee.catalina.OpenEJBSecurityListener$RequestCapturer.invoke(OpenEJBSecurityListener.java:97)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+23-Mar-2018 22:32:34.128 INFO [http-nio-8080-exec-202] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:32:36.018 INFO [http-nio-8080-exec-209] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:32:36.018 INFO [http-nio-8080-exec-212] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:32:36.409 INFO [http-nio-8080-exec-210] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:32:37.857 INFO [http-nio-8080-exec-205] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context2021353027330352204.xml'
+23-Mar-2018 22:33:20.599 INFO [http-nio-8080-exec-211] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:33:21.693 INFO [http-nio-8080-exec-213] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:33:25.370 INFO [467] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:33:25.401 INFO [http-nio-8080-exec-218] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:33:25.589 INFO [http-nio-8080-exec-196] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:33:26.464 INFO [463] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4666561088856274979.xml'
+23-Mar-2018 22:33:26.885 INFO [http-nio-8080-exec-208] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:33:28.348 INFO [470] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/maven'
+23-Mar-2018 22:33:28.348 SEVERE [470] org.apache.catalina.core.ApplicationContext.log Manager: ManagerServlet.reload[/maven]
+ java.lang.IllegalStateException: Context with name [/maven] has not yet been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3764)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1006)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:346)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:589)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.tomee.catalina.OpenEJBSecurityListener$RequestCapturer.invoke(OpenEJBSecurityListener.java:97)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+23-Mar-2018 22:33:28.942 INFO [http-nio-8080-exec-202] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:33:29.020 INFO [http-nio-8080-exec-208] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:33:29.567 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:33:30.223 INFO [458] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context554067088335834784.xml'
+23-Mar-2018 22:33:32.279 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:33:32.310 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:33:32.420 INFO [http-nio-8080-exec-196] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:33:32.982 INFO [http-nio-8080-exec-222] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1778644053582315026.xml'
+23-Mar-2018 22:33:33.388 INFO [http-nio-8080-exec-196] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:33:33.404 INFO [http-nio-8080-exec-222] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:33:33.523 INFO [http-nio-8080-exec-219] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:33:34.102 INFO [http-nio-8080-exec-209] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context8427545152981864454.xml'
+23-Mar-2018 22:34:36.213 INFO [436] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:34:36.307 INFO [http-nio-8080-exec-209] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:34:36.447 INFO [http-nio-8080-exec-223] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:34:36.932 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6583458519587176229.xml'
+23-Mar-2018 22:34:37.369 INFO [http-nio-8080-exec-209] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:34:37.385 INFO [http-nio-8080-exec-227] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:34:37.479 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:34:37.987 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context4264386973043699978.xml'
+23-Mar-2018 22:34:52.672 INFO [http-nio-8080-exec-225] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:34:52.704 INFO [http-nio-8080-exec-223] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:34:53.001 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:34:53.563 INFO [http-nio-8080-exec-222] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context900130261067863489.xml'
+23-Mar-2018 22:34:53.907 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:34:53.938 INFO [http-nio-8080-exec-222] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:34:54.141 INFO [http-nio-8080-exec-219] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:34:54.626 INFO [http-nio-8080-exec-228] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context7641210789372661201.xml'
+23-Mar-2018 22:34:58.641 INFO [http-nio-8080-exec-219] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:34:58.688 INFO [http-nio-8080-exec-228] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:34:58.782 INFO [http-nio-8080-exec-224] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:34:59.266 INFO [http-nio-8080-exec-225] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1664217320663726394.xml'
+23-Mar-2018 22:34:59.610 INFO [http-nio-8080-exec-224] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:34:59.610 INFO [http-nio-8080-exec-225] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:34:59.719 INFO [http-nio-8080-exec-226] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:35:00.500 INFO [http-nio-8080-exec-223] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context7583653723678111044.xml'
+23-Mar-2018 22:35:06.639 INFO [http-nio-8080-exec-226] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:35:06.686 INFO [http-nio-8080-exec-227] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:35:06.826 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:35:07.420 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context7953997149093252738.xml'
+23-Mar-2018 22:35:07.951 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:35:08.061 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:35:08.170 INFO [http-nio-8080-exec-222] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:35:08.607 INFO [http-nio-8080-exec-219] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1795362686838373910.xml'
+23-Mar-2018 22:37:26.647 INFO [http-nio-8080-exec-222] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:37:26.662 INFO [http-nio-8080-exec-219] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:37:26.772 INFO [http-nio-8080-exec-228] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:37:27.272 INFO [http-nio-8080-exec-224] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context3946454933683578493.xml'
+23-Mar-2018 22:37:27.647 INFO [http-nio-8080-exec-228] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:37:27.662 INFO [http-nio-8080-exec-224] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:37:27.740 INFO [http-nio-8080-exec-225] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:37:28.162 INFO [http-nio-8080-exec-226] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context3590709107490681933.xml'
+23-Mar-2018 22:37:43.551 INFO [http-nio-8080-exec-226] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:37:43.691 INFO [http-nio-8080-exec-223] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:37:43.879 INFO [http-nio-8080-exec-227] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:37:44.566 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context3656387847356883685.xml'
+23-Mar-2018 22:37:45.020 INFO [http-nio-8080-exec-227] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:37:45.051 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:37:45.285 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:37:45.754 INFO [http-nio-8080-exec-222] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context8342595960265369508.xml'
+23-Mar-2018 22:38:01.049 INFO [http-nio-8080-exec-222] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:38:01.065 INFO [http-nio-8080-exec-219] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:38:01.205 INFO [http-nio-8080-exec-228] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:38:01.705 INFO [http-nio-8080-exec-224] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context695665064016997133.xml'
+23-Mar-2018 22:38:02.080 INFO [http-nio-8080-exec-228] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:38:02.174 INFO [http-nio-8080-exec-224] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:38:02.315 INFO [http-nio-8080-exec-225] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:38:02.737 INFO [http-nio-8080-exec-226] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context3137730505708413604.xml'
+23-Mar-2018 22:38:06.496 INFO [http-nio-8080-exec-225] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:38:06.527 INFO [http-nio-8080-exec-226] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:38:06.652 INFO [http-nio-8080-exec-223] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:38:07.199 INFO [http-nio-8080-exec-227] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1364658256146075763.xml'
+23-Mar-2018 22:38:07.636 INFO [http-nio-8080-exec-223] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:38:07.652 INFO [http-nio-8080-exec-227] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:38:07.746 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:38:08.418 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context2087079620254417766.xml'
+23-Mar-2018 22:39:12.288 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:39:12.303 INFO [http-nio-8080-exec-222] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:39:12.491 INFO [http-nio-8080-exec-219] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:39:13.538 INFO [http-nio-8080-exec-228] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context8531146859994140355.xml'
+23-Mar-2018 22:39:14.178 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:39:14.553 INFO [http-nio-8080-exec-228] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:39:14.803 INFO [http-nio-8080-exec-224] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:39:15.725 INFO [http-nio-8080-exec-225] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6937328866071136097.xml'
+23-Mar-2018 22:39:20.503 INFO [http-nio-8080-exec-224] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:39:20.518 INFO [http-nio-8080-exec-225] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:39:20.596 INFO [http-nio-8080-exec-226] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:39:21.018 INFO [http-nio-8080-exec-223] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1855756461802648371.xml'
+23-Mar-2018 22:39:21.315 INFO [http-nio-8080-exec-226] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:39:21.362 INFO [http-nio-8080-exec-223] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:39:21.487 INFO [http-nio-8080-exec-227] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:39:21.893 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context8953872474718964542.xml'
+23-Mar-2018 22:42:32.570 INFO [http-nio-8080-exec-227] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:42:32.585 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:42:32.695 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:42:33.273 INFO [http-nio-8080-exec-222] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context522126222054987034.xml'
+23-Mar-2018 22:42:33.757 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:42:33.773 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:42:33.867 INFO [http-nio-8080-exec-222] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:42:34.601 INFO [http-nio-8080-exec-219] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1589724694529056872.xml'
+23-Mar-2018 22:45:38.424 INFO [http-nio-8080-exec-219] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:45:38.439 INFO [http-nio-8080-exec-228] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:45:38.549 INFO [http-nio-8080-exec-224] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:45:39.408 INFO [http-nio-8080-exec-225] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context1925898613311796738.xml'
+23-Mar-2018 22:45:40.064 INFO [http-nio-8080-exec-224] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:45:40.080 INFO [http-nio-8080-exec-225] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:45:40.174 INFO [http-nio-8080-exec-226] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:45:40.705 INFO [http-nio-8080-exec-223] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context6916665943726549585.xml'
+23-Mar-2018 22:45:57.647 INFO [http-nio-8080-exec-223] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:45:57.663 INFO [http-nio-8080-exec-227] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:45:57.804 INFO [http-nio-8080-exec-221] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:45:58.350 INFO [http-nio-8080-exec-220] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context5063690047908869536.xml'
+23-Mar-2018 22:51:02.993 INFO [http-nio-8080-exec-61] org.apache.catalina.core.ApplicationContext.log Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+23-Mar-2018 22:51:03.013 INFO [http-nio-8080-exec-61] org.apache.catalina.core.ApplicationContext.log Manager: init: Global resources are available
+23-Mar-2018 22:51:03.017 INFO [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:51:03.037 INFO [http-nio-8080-exec-61] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:51:03.057 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:51:03.105 INFO [http-nio-8080-exec-8] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+23-Mar-2018 22:51:03.297 INFO [http-nio-8080-exec-16] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:51:06.435 INFO [http-nio-8080-exec-16] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/maven'
+23-Mar-2018 22:51:07.156 INFO [http-nio-8080-exec-45] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context2515629036591241644.xml'
+23-Mar-2018 22:51:20.581 INFO [http-nio-8080-exec-14] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/C:/Users/Steve/AppData/Local/Temp/context9033074900448735067.xml'
+23-Mar-2018 22:51:20.612 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/maven'

@@ -7,7 +7,11 @@ package com.lms.maven.bean.controller;
 
 import com.lms.maven.bean.helper.ProcessorBean;
 import com.lms.maven.bean.model.ExerciseBean;
-import java.util.Objects;
+import static com.lms.maven.util.Util.symDiff;
+import static com.lms.maven.util.Util.convertToJavaScriptArray;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
@@ -17,22 +21,17 @@ import javax.inject.Inject;
  */
 public class ExerciseChecker {
 
-    private String alertClass;
-    private String responseText;
-    private String messageLabel,
-            inputParamLabel,
-            yourOutputLabel,
-            correctOutputLabel;
-    private boolean responseRenderBlock,
-            messageLabelRender,
-            yourOutputLabelRender,
-            correctOutputLabelRender;
-    private boolean inputParamsRender,
-            responseOutputTextAreaRender,
-            correctOutputTextAreaRender;
-    private String responseOutputTextRows,
-            correctOutputTextRows,
-            inputParamsRows;
+    private String responseText, differentWords;
+    private String alertClass, iconClass;
+    private String messageLabel, yourOutputLabel, correctOutputLabel;
+    private boolean responseRenderBlock;
+    private boolean panelRenderBlock;
+    private boolean messagePanelHeaderRender;
+    private boolean yourOutputPanelHeaderRender;
+    private boolean correctOutputPanelHeaderRender;
+    private boolean recommendationPanelRender;
+    private boolean responseOutputPanelBodyRender;
+    private boolean correctOutputPanelBodyRender;
 
     @Inject
     private ExerciseBean exerciseBean;
@@ -42,21 +41,10 @@ public class ExerciseChecker {
 
     @PostConstruct
     public void init() {
-        alertClass = "alert alert-info";
-        messageLabel = "";
-        inputParamLabel = initInputParamLabel();
+        alertClass = "info";
         yourOutputLabel = "Your Output";
         correctOutputLabel = "Correct Output";
-        responseRenderBlock = false;
-        messageLabelRender = false;
-        yourOutputLabelRender = false;
-        correctOutputLabelRender = false;
-        inputParamsRender = initInputParamsRender();
-        responseOutputTextAreaRender = false;
-        correctOutputTextAreaRender = false;
-        responseOutputTextRows = "10";
-        correctOutputTextRows = "10";
-        inputParamsRows = initInputParamsRows();
+        recommendationPanelRender = true;
     }
 
     public String getResponseText() {
@@ -67,6 +55,14 @@ public class ExerciseChecker {
         this.responseText = responseText;
     }
 
+    public String getDifferentWords() {
+        return differentWords;
+    }
+
+    public void setDifferentWords(String differentWords) {
+        this.differentWords = differentWords;
+    }
+
     public String getAlertClass() {
         return alertClass;
     }
@@ -75,20 +71,20 @@ public class ExerciseChecker {
         this.alertClass = alertClass;
     }
 
+    public String getIconClass() {
+        return iconClass;
+    }
+
+    public void setIconClass(String iconClass) {
+        this.iconClass = iconClass;
+    }
+
     public String getMessageLabel() {
         return messageLabel;
     }
 
     public void setMessageLabel(String messageLabel) {
         this.messageLabel = messageLabel;
-    }
-
-    public String getInputParamLabel() {
-        return inputParamLabel;
-    }
-
-    public void setInputParamLabel(String inputParamLabel) {
-        this.inputParamLabel = inputParamLabel;
     }
 
     public String getYourOutputLabel() {
@@ -107,44 +103,44 @@ public class ExerciseChecker {
         this.correctOutputLabel = correctOutputLabel;
     }
 
-    public boolean getYourOutputLabelRender() {
-        return yourOutputLabelRender;
+    public boolean getYourOutputPanelHeaderRender() {
+        return yourOutputPanelHeaderRender;
     }
 
-    public void setYourOutputLabelRender(boolean yourOutputLabelRender) {
-        this.yourOutputLabelRender = yourOutputLabelRender;
+    public void setYourOutputPanelHeaderRender(boolean yourOutputPanelHeaderRender) {
+        this.yourOutputPanelHeaderRender = yourOutputPanelHeaderRender;
     }
 
-    public boolean getCorrectOuputLabelRender() {
-        return correctOutputLabelRender;
+    public boolean getCorrectOuputPanelHeaderRender() {
+        return correctOutputPanelHeaderRender;
     }
 
-    public boolean getInputParamsRender() {
-        return inputParamsRender;
+    public boolean getRecommendationPanelRender() {
+        return recommendationPanelRender;
     }
 
-    public void setInputParamsRender(boolean inputParamsRender) {
-        this.inputParamsRender = inputParamsRender;
+    public void setRecommendationPanelRender(boolean recommendationPanelRender) {
+        this.recommendationPanelRender = recommendationPanelRender;
     }
 
-    public void setCorrectOutputLabelRender(boolean correctOutputLabelRender) {
-        this.correctOutputLabelRender = correctOutputLabelRender;
+    public void setCorrectOutputPanelHeaderRender(boolean correctOutputPanelHeaderRender) {
+        this.correctOutputPanelHeaderRender = correctOutputPanelHeaderRender;
     }
 
-    public boolean getResponseOutputTextAreaRender() {
-        return responseOutputTextAreaRender;
+    public boolean getResponseOutputPanelBodyRender() {
+        return responseOutputPanelBodyRender;
     }
 
-    public void setResponseOutputTextAreaRender(boolean responseOutputTextAreaRender) {
-        this.responseOutputTextAreaRender = responseOutputTextAreaRender;
+    public void setResponseOutputPanelBodyRender(boolean responseOutputPanelBodyRender) {
+        this.responseOutputPanelBodyRender = responseOutputPanelBodyRender;
     }
 
-    public boolean getCorrectOutputTextAreaRender() {
-        return correctOutputTextAreaRender;
+    public boolean getCorrectOutputPanelBodyRender() {
+        return correctOutputPanelBodyRender;
     }
 
-    public void setCorrectOutputTextAreaRender(boolean correctOutputTextAreaRender) {
-        this.correctOutputTextAreaRender = correctOutputTextAreaRender;
+    public void setCorrectOutputPanelBodyRender(boolean correctOutputPanelBodyRender) {
+        this.correctOutputPanelBodyRender = correctOutputPanelBodyRender;
     }
 
     public boolean getResponseRenderBlock() {
@@ -155,161 +151,95 @@ public class ExerciseChecker {
         this.responseRenderBlock = responseRenderBlock;
     }
 
-    public boolean getMessageLabelRender() {
-        return messageLabelRender;
+    public boolean getPanelRenderBlock() {
+        return panelRenderBlock;
     }
 
-    public void setMessageLabelRender(boolean messageLabelRender) {
-        this.messageLabelRender = messageLabelRender;
+    public void setPanelRenderBlock(boolean panelRenderBlock) {
+        this.panelRenderBlock = panelRenderBlock;
     }
 
-    public String getResponseOutputTextRows() {
-        return responseOutputTextRows;
+    public boolean getMessagePanelHeaderRender() {
+        return messagePanelHeaderRender;
     }
 
-    public void setResponseOutputTextRows(String responseOutputTextRows) {
-        this.responseOutputTextRows = responseOutputTextRows;
+    public void setMessagePanelHeaderRender(boolean messagePanelHeaderRender) {
+        this.messagePanelHeaderRender = messagePanelHeaderRender;
     }
 
-    public String getCorrectOutputTextRows() {
-        return correctOutputTextRows;
-    }
-
-    public void setCorrectOutputTextRows(String correctOutputTextRows) {
-        this.correctOutputTextRows = correctOutputTextRows;
-    }
-
-    public String getInputParamsRows() {
-        return inputParamsRows;
-    }
-
-    public void setInputParamsRows(String inputParamsRows) {
-        this.inputParamsRows = inputParamsRows;
-    }
-
-    public String compileRun() {
+    public void compileRun() {
         String[] output = processorBean.executeProgram();
-        String code = output[0];
-        String programOutput = output[1];
-        String rows = getRows(programOutput.split("\n"));
-
-        setAlertClass(getCompileRunAlertClassType(code));
-        setResponseRenderBlock(true);
-        setMessageLabelRender(true);
-        setResponseOutputTextAreaRender(true);
-        setResponseOutputTextRows(rows);
-        setResponseText(getCompileRunResponse(output));
-        return "CheckExercise";
-    }
-
-    public String autoCheckProgram() {
-        String[] output = processorBean.executeProgram();
-        String programOutput = output[1];
-        String rows = getRows(programOutput.split("\n"));
-
-        String correctOutput = exerciseBean.getCorrectOutput();
-        String rows2 = getRows(correctOutput.split("\n"));
-
-        if (isCorrect(programOutput, correctOutput)) {
-            setAlertClass(getCheckProgramResponseAlertClassType(true));
-            setResponseRenderBlock(true);
-            setMessageLabelRender(true);
-            setYourOutputLabelRender(false);
-            setCorrectOutputLabelRender(false);
-            setResponseOutputTextAreaRender(false);
-            setCorrectOutputTextAreaRender(false);
-        } else {
-            setResponseText(getCheckProgramResponse(output));
-            setAlertClass(getCheckProgramResponseAlertClassType(false));
-            setResponseRenderBlock(true);
-            setMessageLabelRender(true);
-            setResponseOutputTextRows(rows);
-            setCorrectOutputTextRows(rows2);
-            setYourOutputLabelRender(true);
-            setCorrectOutputLabelRender(true);
-            setResponseOutputTextAreaRender(true);
-            setCorrectOutputTextAreaRender(true);
-        }
-
-        return "CheckExercise";
-    }
-
-    private String getCompileRunResponse(String[] output) {
         String code = output[0];
         String programOutput = output[1];
         switch (code) {
-            case "0":
             case "1":
+                setAlertClass("danger");
+                setIconClass("times-circle-o");
                 setMessageLabel("Error: Compilation Unsuccessful!");
-                return programOutput;
+                break;
             case "2":
+                setAlertClass("success");
+                setIconClass("check-square-o");
                 setMessageLabel("Compile & Run Successful!");
-                return programOutput;
-            case "3":
-                setMessageLabel("Error: Runtime Unsuccessful!");
-                return programOutput;
+                break;
             case "4":
+                if (programOutput.equals("Process Terminated")) {
+                    setAlertClass("warning");
+                    setIconClass("warning");
+                    setMessageLabel("Warning: Program Took Too Long To Run!");
+                } else {
+                    setAlertClass("danger");
+                    setIconClass("times-circle-o");
+                    setMessageLabel("Runtime Error!");
+                }
+                break;
             default:
-                setMessageLabel("Warning! Program Took Too Long To Run!");
-                return programOutput;
+                setAlertClass("danger");
+                setIconClass("question-circle-o");
+                setMessageLabel("Error!");
+                break;
         }
+
+        setResponseText(programOutput);
+        setResponseRenderBlock(true);
+        setPanelRenderBlock(true);
+        setMessagePanelHeaderRender(true);
+        setResponseOutputPanelBodyRender(true);
     }
 
-    private String getCheckProgramResponse(String[] output) {
-        return output[1];
-    }
-
-    private String getCompileRunAlertClassType(String code) {
-        switch (code) {
-            case "0":
-            case "1":
-            case "3":
-                return "alert alert-danger";
-            case "2":
-                return "alert alert-success";
-            case "4":
-            default:
-                return "alert alert-warning";
-        }
-    }
-
-    private String getCheckProgramResponseAlertClassType(boolean isSuccess) {
-        if (isSuccess) {
+    public void autoCheckProgram() {
+        String programOutput = processorBean.executeProgram()[1];
+        String correctOutput = exerciseBean.getCorrectOutput();
+        Set<String> a = new HashSet(Arrays.asList(programOutput.trim().split("\\s")));
+        Set<String> b = new HashSet(Arrays.asList(correctOutput.trim().split("\\s")));
+        Set<String> result = symDiff(a, b);
+        boolean isCorrect = result.isEmpty();
+        if (isCorrect) {
+            setAlertClass("success");
+            setIconClass("check-square-o");
             setMessageLabel("Your Program Is Correct!");
-            return "alert alert-success";
+            setResponseRenderBlock(true);
+            setPanelRenderBlock(false);
+            setMessagePanelHeaderRender(true);
+            setYourOutputPanelHeaderRender(false);
+            setCorrectOutputPanelHeaderRender(false);
+            setResponseOutputPanelBodyRender(false);
+            setCorrectOutputPanelBodyRender(false);
+            setRecommendationPanelRender(false);
         } else {
+            setResponseText(programOutput);
+            setDifferentWords(convertToJavaScriptArray(result).toString());
+            setAlertClass("danger");
+            setIconClass("times-circle-o");
             setMessageLabel("Your Program Is Incorrect!");
-            return "alert alert-danger";
+            setResponseRenderBlock(true);
+            setPanelRenderBlock(true);
+            setMessagePanelHeaderRender(true);
+            setYourOutputPanelHeaderRender(true);
+            setCorrectOutputPanelHeaderRender(true);
+            setResponseOutputPanelBodyRender(true);
+            setCorrectOutputPanelBodyRender(true);
+            setRecommendationPanelRender(false);
         }
     }
-
-    private String getRows(String[] text) {
-        return Integer.toString(text.length + 1);
-    }
-
-    private boolean isCorrect(String str, String str2) {
-        String trimmedStr = str.trim();
-        String trimmedStr2 = str2.trim();
-        String removedWhiteSpaceStr = trimmedStr.replaceAll("\\s", "");
-        String removedWhiteSpaceStr2 = trimmedStr2.replaceAll("\\s", "");
-        return Objects.equals(removedWhiteSpaceStr, removedWhiteSpaceStr2);
-    }
-
-    private String initInputParamLabel() {
-        return "Enter input data for the program (Sample data provided below. You may modify it.)";
-    }
-
-    private boolean initInputParamsRender() {
-        return (exerciseBean.getInputParams() != null);
-    }
-
-    private String initInputParamsRows() {
-        String inputParams = exerciseBean.getInputParams();
-        if (inputParams != null) {
-            return Integer.toString(inputParams.split("\n").length);
-        } else {
-            return "1";
-        }
-    }
-
 }

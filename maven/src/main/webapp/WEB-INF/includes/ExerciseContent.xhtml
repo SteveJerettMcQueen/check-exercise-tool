@@ -2,85 +2,136 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
     <ui:composition>
+        <!--Exercise Checker Form-->
         <h:form id="exer-check-form">
-            <div id="editor" class="container-fluid orange-box">#{exerciseBean.exerDescr}</div>
 
+            <!--Code Editor Hidden Value-->
             <h:inputHidden 
                 id="hidden-program-code" 
                 value="#{exerciseBean.programCode}">
             </h:inputHidden>
 
-            <h:panelGroup layout="block" styleClass="panel-group">
+            <!--Server Side Hidden Values-->
+            <h:inputHidden 
+                id="hidden-different-words" 
+                value="#{exerciseChecker.differentWords}">
+            </h:inputHidden>
+
+            <!--Code Editor-->
+            <div id="editor" class="container-fluid orange-box">#{exerciseBean.exerDescr}</div>
+
+            <!--Input Parameters Section-->
+            <h:panelGroup 
+                layout="block" 
+                styleClass="panel-group"
+                rendered="#{exercisePicker.inputParamsPanelRender}">
                 <h:outputLabel 
-                    rendered="#{exerciseChecker.inputParamsRender}"
-                    value="#{exerciseChecker.inputParamLabel}">
+                    value="#{exercisePicker.inputParamsLabel}">
                 </h:outputLabel>
                 <h:inputTextarea 
+                    id="input-params"
                     styleClass="form-control input-lg" 
-                    rows="#{exerciseChecker.inputParamsRows}"
-                    rendered="#{exerciseChecker.inputParamsRender}"
+                    rows="#{exercisePicker.inputParamsRows}"
                     value="#{exerciseBean.inputParams}">
                 </h:inputTextarea>
             </h:panelGroup>
 
+            <!--Code Editor Form Controls-->
             <h:panelGroup layout="block" styleClass="panel-group btn-toolbar">
                 <h:commandButton 
+                    id="compile-run-btn"
+                    styleClass="btn btn-primary"
                     value="Compile/Run" 
-                    action="#{exerciseChecker.compileRun}"
-                    styleClass="btn btn-primary">
+                    action="#{exerciseChecker.compileRun}">
+                    <f:ajax 
+                        event="click"
+                        onevent="highlightText"
+                        execute="hidden-program-code input-params" 
+                        render="response-block recommendation-panel">
+                    </f:ajax>
                 </h:commandButton>
                 <h:commandButton 
+                    id="auto-check-btn"
+                    styleClass="btn btn-primary"
                     value="Automatic Check" 
-                    action="#{exerciseChecker.autoCheckProgram}"
-                    styleClass="btn btn-primary">
+                    action="#{exerciseChecker.autoCheckProgram}">
+                    <f:ajax 
+                        event="click"
+                        onevent="markDifferentWords"
+                        execute="hidden-program-code input-params" 
+                        render="response-block recommendation-panel hidden-different-words">
+                    </f:ajax>
                 </h:commandButton>
+                <p:commandButton value="Start" type="button" onclick="PF('pbAjax').start();PF('startButton2').disable();" widgetVar="startButton2" />
+                <br /><br />
+                <p:progressBar widgetVar="pbAjax" ajax="true" value="#{exerciseChecker.compileRun}" labelTemplate="{value}%" styleClass="animated" global="false">
+                    <p:ajax event="complete" update="exer-check-form" oncomplete="PF('startButton2').enable()"/>
+                </p:progressBar>
             </h:panelGroup>
 
-            <!--Response text-->
-            <h:panelGroup layout="block" 
-                          styleClass="panel-group #{exerciseChecker.alertClass}"
-                          rendered="#{exerciseChecker.responseRenderBlock}">
+            <!--Response Block-->
+            <h:panelGroup id="response-block" layout="block">
+                <!--Response Container-->
+                <h:panelGroup layout="block" styleClass="panel-group" rendered="#{exerciseChecker.responseRenderBlock}">
+                    <!--Message Panel-->
+                    <h:panelGroup layout="block" styleClass="alert alert-#{exerciseChecker.alertClass}">
+                        <table class="message-panel">
+                            <tbody>
+                                <tr>
+                                    <td class="vert-aligned">
+                                        <i id="message-icon" class="fa fa-#{exerciseChecker.iconClass}"/>
+                                    </td>
+                                    <td class="vert-aligned">
+                                        <h:outputLabel 
+                                            styleClass="alert-heading"
+                                            rendered="#{exerciseChecker.messagePanelHeaderRender}"
+                                            value="#{exerciseChecker.messageLabel}">
+                                        </h:outputLabel>  
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </h:panelGroup>
+                    <!--Output Panels-->
+                    <h:panelGroup layout="block" rendered="#{exerciseChecker.panelRenderBlock}">
+                        <!--Primary Output Panel Header-->
+                        <h:panelGroup 
+                            layout="block" 
+                            rendered="#{exerciseChecker.yourOutputPanelHeaderRender}">
+                            <h:outputLabel value="#{exerciseChecker.yourOutputLabel}"/>
+                        </h:panelGroup>
+                        <!--Primary Output Panel Body-->
+                        <h:panelGroup 
+                            layout="block" 
+                            rendered="#{exerciseChecker.responseOutputPanelBodyRender}">
+                            <pre class="java"><code><h:outputText
+                                id="response-output-text"
+                                value="#{exerciseChecker.responseText}">
+                                </h:outputText></code></pre>
+                        </h:panelGroup>
 
-                <h4>
-                    <h:outputLabel 
-                        styleClass="alert-heading"
-                        rendered="#{exerciseChecker.messageLabelRender}"
-                        value="#{exerciseChecker.messageLabel}">
-                    </h:outputLabel>
-                </h4>
-
-                <div class="panel-group">
-                    <h:outputLabel
-                        rendered="#{exerciseChecker.yourOutputLabelRender}"
-                        value="#{exerciseChecker.yourOutputLabel}">
-                    </h:outputLabel>
-                    <h:inputTextarea 
-                        id="response-output-text-area"
-                        styleClass="form-control input-lg" 
-                        rows="#{exerciseChecker.responseOutputTextRows}"
-                        readonly="true"
-                        value="#{exerciseChecker.responseText}"
-                        rendered="#{exerciseChecker.responseOutputTextAreaRender}">
-                    </h:inputTextarea>  
-                </div>
-
-                <div class="panel-group">
-                    <h:outputLabel 
-                        rendered="#{exerciseChecker.correctOuputLabelRender}"
-                        value="#{exerciseChecker.correctOutputLabel}">
-                    </h:outputLabel>
-                    <h:inputTextarea 
-                        styleClass="form-control input-lg" 
-                        rows="#{exerciseChecker.correctOutputTextRows}"
-                        readonly="true"
-                        value="#{exerciseBean.correctOutput}"
-                        rendered="#{exerciseChecker.correctOutputTextAreaRender}">
-                    </h:inputTextarea>
-                </div>
+                        <!--Secondary Output Panel Header-->
+                        <h:panelGroup 
+                            layout="block" 
+                            rendered="#{exerciseChecker.correctOuputPanelHeaderRender}">
+                                <h:outputLabel value="#{exerciseChecker.correctOutputLabel}"/>
+                        </h:panelGroup>
+                        <!--Secondary Output Panel Body-->
+                        <h:panelGroup 
+                            layout="block"
+                            rendered="#{exerciseChecker.correctOutputPanelBodyRender}">
+                                <pre class="java"><code><h:outputText
+                                    id="correct-output-text"
+                                    value="#{exerciseBean.correctOutput}">
+                                </h:outputText></code></pre>
+                        </h:panelGroup>
+                    </h:panelGroup>
+                </h:panelGroup>
             </h:panelGroup>
         </h:form>
     </ui:composition>

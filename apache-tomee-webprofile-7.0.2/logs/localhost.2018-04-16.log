@@ -1,0 +1,32 @@
+16-Apr-2018 11:05:07.488 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log No state saving method defined, assuming default server state saving
+16-Apr-2018 11:17:39.439 INFO [http-nio-8080-exec-21] org.apache.catalina.core.ApplicationContext.log No state saving method defined, assuming default server state saving
+16-Apr-2018 11:27:16.555 INFO [http-nio-8080-exec-25] org.apache.catalina.core.ApplicationContext.log No state saving method defined, assuming default server state saving
+16-Apr-2018 11:27:16.555 INFO [http-nio-8080-exec-32] org.apache.catalina.core.ApplicationContext.log No state saving method defined, assuming default server state saving
+16-Apr-2018 11:53:21.494 INFO [http-nio-8080-exec-12] org.apache.catalina.core.ApplicationContext.log No state saving method defined, assuming default server state saving
+16-Apr-2018 11:57:01.674 INFO [http-nio-8080-exec-16] org.apache.catalina.core.ApplicationContext.log No state saving method defined, assuming default server state saving
+16-Apr-2018 11:57:45.077 SEVERE [http-nio-8080-exec-13] org.apache.catalina.core.StandardHostValve.invoke Exception Processing /maven/CheckExercise.xhtml
+ java.lang.NullPointerException
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:245)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.tomee.catalina.OpenEJBValve.invoke(OpenEJBValve.java:44)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.tomee.catalina.OpenEJBSecurityListener$RequestCapturer.invoke(OpenEJBSecurityListener.java:97)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+16-Apr-2018 12:16:30.142 INFO [http-nio-8080-exec-5] org.apache.catalina.core.ApplicationContext.log No state saving method defined, assuming default server state saving
+16-Apr-2018 12:21:56.608 INFO [http-nio-8080-exec-13] org.apache.catalina.core.ApplicationContext.log No state saving method defined, assuming default server state saving
+16-Apr-2018 12:23:26.984 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log No state saving method defined, assuming default server state saving
+16-Apr-2018 16:22:50.618 INFO [http-nio-8080-exec-10] org.apache.catalina.core.ApplicationContext.log No state saving method defined, assuming default server state saving

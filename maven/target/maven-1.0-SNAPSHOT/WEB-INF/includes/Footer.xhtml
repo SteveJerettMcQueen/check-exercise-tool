@@ -1,24 +1,31 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
     <ui:composition>
-        <div class="container-fluid text-center">
-            <p>
-                <font color="red">
-                    We recommend that you use this tool to test the code. If your code is wrong, the tool will display 
-                    your output and the correct output so to help you debug the error.
-                </font> 
-                Compile/Run is provided for your convenience to compile and run the code. The extra exercises are available for instructors. 
-                Email y.daniel.liang@gmail.com to request a copy of the extra exercises.
-                <center>
-                    <font size="+0.5">
-                        Please report errors to <a id="link" href="mailto:#">Dr. Liang</a>.
-                    </font>
-                </center>
-            </p>
-        </div>   
+        <h:panelGroup id="recommendation-panel" layout="block" styleClass="container-fluid text-center">
+            <h:panelGroup layout="block" rendered="#{exerciseChecker.recommendationPanelRender}">
+                <p>
+                    <font id="recommendation">
+                        We recommend that you use this tool to test the code. If your code is wrong, the tool will display 
+                        your output and the correct output so to help you debug the error.
+                    </font> 
+                    Compile/Run is provided for your convenience to compile and run the code. The extra exercises are available for instructors. 
+                    Email y.daniel.liang@gmail.com to request a copy of the extra exercises.
+                </p> 
+            </h:panelGroup>
+            <h:panelGroup layout="block">
+                <p>
+                    <center>
+                        <font id="report-error">
+                            Please report errors to <a id="report-link" href="#">Dr. Liang</a>.
+                        </font>
+                    </center>
+                </p>
+            </h:panelGroup>
+        </h:panelGroup>   
     </ui:composition>
 </html>
 

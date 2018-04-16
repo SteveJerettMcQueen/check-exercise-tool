@@ -91,7 +91,11 @@ public class ProcessorBean implements Serializable {
                             output = new String[]{"3", err2};
                             break;
                         default:
-                            output = new String[]{"4", "Process Terminated!"};
+                            if (!err2.isEmpty()) {
+                                output = new String[]{"4", err2};
+                            } else {
+                                output = new String[]{"4", "Process Terminated"};
+                            }
                             break;
                     }
                     deleteFile(clazz + ".class");

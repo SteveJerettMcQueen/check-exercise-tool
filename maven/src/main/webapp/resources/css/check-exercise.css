@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 27, 2018, 8:54:47 AM
+    Author     : sm6668
+*/
+
+table.message-panel {
+    border-collapse: separate;
+    *border-collapse: expression('separate', cellSpacing = '2px');
+    border-spacing: 2px;
+}
+
+table.message-panel td {
+    padding: 0px 10px 0px 0px;
+}
+
+pre > code > span {
+    font-size: 12pt;
+}
+
+#editor { 
+    height: 400px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#master-header {
+    background-color: goldenrod; 
+    border-bottom: 2px solid grey; 
+    border-right: 2px solid grey;
+    margin-bottom: 2px;
+}
+
+#message-icon {
+    font-size: 2.175em;
+}
+
+#picker-box {
+    margin-bottom: 2px;
+}
+
+#recommendation {
+    color: red;
+}
+
+#report-error {
+    font-size: 13pt;
+}
+
+#report-link {
+    background-color: transparent;
+    color: green;
+    text-decoration: none;
+}
+
+.header-text {
+    color: white;
+    font-weight: bold;
+    font-family: Verdana; 
+}
+
+.highlight-correct-output {
+    background-color: #d4edda; /*#d1ecf1, #fff3cd, #f8d7da*/
+
+}
+
+.highlight-your-output {
+    background-color: #f8d7da;
+}
+
+.table tbody > tr > td.vert-aligned {
+    vertical-align: middle;
+}
+
+.orange-box {
+    border: 1px solid #f6912f;
+}
