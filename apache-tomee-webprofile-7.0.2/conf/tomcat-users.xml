@@ -42,9 +42,5 @@
     <!--
 -->
     <role rolename="tomee-admin"/>
-    <user password="csci5520" roles="manager-gui,admin,manager-script" username="SteveMcQueen"/>
-    <user password="csci5520" roles="manager-jmx,admin,manager-script" username="SteveMcQueen"/>
-    <user password="csci5520" roles="tomee-admin,manager-gui,manager-script,admin" username="SteveMcQueen"/>
-    <user password="csci5520" roles="manager-status,admin,manager-script" username="SteveMcQueen"/>
-    <user password="csci5520" roles="manager-script,admin" username="SteveMcQueen"/>
+    <user password="tiger" roles="manager-script,manager-status,manager-gui,admin" username="scott"/>
 </tomcat-users>
