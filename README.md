@@ -1,10 +1,8 @@
 # Check Exercise Tool
 
-Project Description
+The goal of this project is to develop a "Check Exercise Tool" exactly like the one presented at the website:
 
-### Motivation
-
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+#####[https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml "Check Exercise Tool")
 
 ## Authors
 
@@ -14,28 +12,25 @@ A short description of the motivation behind the creation and maintenance of the
 
 ## Development
 
-OS Name: Windows 10
-OS Version: 10.0
-Server Name: Apache Tomcat (TomEE) / 8.5.6 (7.0.2)
-Server Version: 
-
-###Software
+The project was developed using the list of software below:
 
 Software Type | Name
 ------------- | -------------
-OS Name  | **Windows 10**
-OS Version  | **10.0**
-Server Name  | **Apache Tomcat (TomEE)**
-Server Version  | **Apache Tomcat (TomEE) / 8.5.6 (7.0.2)**
-Database Server  | **Apache Derby**
-Database Version  | **Apache Derby 10.11.1.2**
-User Interface  | **JavaServer Faces, Bootstrap 3.3.7**
+OS Name:  | **Windows 10**
+OS Version:  | **10.0**
+Server Name:  | **Apache Tomcat (TomEE)**
+Server Version:  | **Apache Tomcat (TomEE) / 8.5.6 (7.0.2)**
+Database Server:  | **Apache Derby**
+Database Version:  | **Apache Derby 10.11.1.2**
+User Interface:  | **JavaServer Faces, Bootstrap 3.3.7**
 
 ## Built With
 
 * NetBeans 8.2
 
-## Dependents
+## Additional Software
 
-* Ace Editor
-* Mark.js
+* ####Ace Editor
+An embeddable code editor written in JavaScript. It matches the features and performance of native editors such as Sublime, Vim and TextMate.
+* ####Mark.js
+Search term highlighting intended for every use case. Can be used with plain JavaScript or as jQuery plugin.

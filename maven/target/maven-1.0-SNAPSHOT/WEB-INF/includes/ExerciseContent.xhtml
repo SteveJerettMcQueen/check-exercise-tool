@@ -93,11 +93,31 @@
                     </h:panelGroup>
                     <!--Output Panels-->
                     <h:panelGroup layout="block" rendered="#{exerciseChecker.panelRenderBlock}">
+                        <!--Tertiary Output Panel Header-->
+                        <h:panelGroup 
+                            layout="block" 
+                            rendered="#{exerciseChecker.inputParamsTestPanelHeaderRender}">
+                            <h:outputLabel 
+                                value="#{exerciseChecker.inputParamsTestLabel}">
+                            </h:outputLabel>
+                        </h:panelGroup>
+                        <!--Tertiary Output Panel Body-->
+                        <h:panelGroup 
+                            layout="block" 
+                            rendered="#{exerciseChecker.inputParamsTestPanelBodyRender}">
+                            <pre class="java"><code><h:outputText
+                                id="input-params-test-response-text"
+                                value="#{exerciseChecker.inputParamsTestResponseText}">
+                                </h:outputText></code></pre>
+                        </h:panelGroup>
+
                         <!--Primary Output Panel Header-->
                         <h:panelGroup 
                             layout="block" 
                             rendered="#{exerciseChecker.yourOutputPanelHeaderRender}">
-                            <h:outputLabel value="#{exerciseChecker.yourOutputLabel}"/>
+                            <h:outputLabel 
+                                value="#{exerciseChecker.yourOutputLabel}">
+                            </h:outputLabel>
                         </h:panelGroup>
                         <!--Primary Output Panel Body-->
                         <h:panelGroup 
@@ -113,7 +133,9 @@
                         <h:panelGroup 
                             layout="block" 
                             rendered="#{exerciseChecker.correctOuputPanelHeaderRender}">
-                                <h:outputLabel value="#{exerciseChecker.correctOutputLabel}"/>
+                            <h:outputLabel 
+                                value="#{exerciseChecker.correctOutputLabel}">
+                            </h:outputLabel>
                         </h:panelGroup>
                         <!--Secondary Output Panel Body-->
                         <h:panelGroup 

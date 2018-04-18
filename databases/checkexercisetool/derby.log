@@ -1,6 +1,6 @@
-Wed Apr 18 12:25:05 EDT 2018 : Could not listen on port 1527 on host localhost:
+Wed Apr 18 18:12:16 EDT 2018 : Could not listen on port 1527 on host localhost:
  java.net.BindException: Address already in use: JVM_Bind
-Wed Apr 18 12:25:05 EDT 2018 : Apache Derby Network Server - 10.11.1.2 - (1629631) started and ready to accept connections on port 1527
+Wed Apr 18 18:12:16 EDT 2018 : Apache Derby Network Server - 10.11.1.2 - (1629631) started and ready to accept connections on port 1527
 An exception was thrown during network server startup. DRDA_ListenPort.S:Could not listen on port 1527 on host localhost:
  java.net.BindException: Address already in use: JVM_Bind
 java.lang.reflect.InvocationTargetException
@@ -17,8 +17,8 @@ Caused by: java.lang.Exception: DRDA_ListenPort.S:Could not listen on port 1527 
 	at org.apache.derby.impl.drda.NetworkServerControlImpl.blockingStart(Unknown Source)
 	... 6 more
 ----------------------------------------------------------------
-Wed Apr 18 12:25:05 EDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0162-d992-e508-00003ee3f381 
+Wed Apr 18 18:12:16 EDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0162-dad0-bf9e-00003ee3f381 
 on database directory E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\repositories\check-exercise-tool\databases\checkexercisetool\checkexercisetool with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
 Loaded from file:/C:/Program%20Files/Java/jdk1.8.0_144/db/lib/derby.jar
 java.vendor=Oracle Corporation

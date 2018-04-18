@@ -21,17 +21,20 @@ import javax.inject.Inject;
  */
 public class ExerciseChecker {
 
-    private String responseText, differentWords;
+    private String responseText, inputParamsTestResponseText, differentWords;
     private String alertClass, iconClass;
-    private String messageLabel, yourOutputLabel, correctOutputLabel;
+    private String messageLabel, inputParamsTestLabel,
+            yourOutputLabel, correctOutputLabel;
     private boolean responseRenderBlock;
     private boolean panelRenderBlock;
     private boolean messagePanelHeaderRender;
+    private boolean inputParamsTestPanelHeaderRender;
     private boolean yourOutputPanelHeaderRender;
     private boolean correctOutputPanelHeaderRender;
-    private boolean recommendationPanelRender;
+    private boolean inputParamsTestPanelBodyRender;
     private boolean responseOutputPanelBodyRender;
     private boolean correctOutputPanelBodyRender;
+    private boolean recommendationPanelRender;
 
     @Inject
     private ExerciseBean exerciseBean;
@@ -42,6 +45,7 @@ public class ExerciseChecker {
     @PostConstruct
     public void init() {
         alertClass = "info";
+        inputParamsTestLabel = "Inputs For Test";
         yourOutputLabel = "Your Output";
         correctOutputLabel = "Correct Output";
         recommendationPanelRender = true;
@@ -53,6 +57,14 @@ public class ExerciseChecker {
 
     public void setResponseText(String responseText) {
         this.responseText = responseText;
+    }
+
+    public String getInputParamsTestResponseText() {
+        return inputParamsTestResponseText;
+    }
+
+    public void setInputParamsTestResponseText(String inputParamsResponseText) {
+        this.inputParamsTestResponseText = inputParamsResponseText;
     }
 
     public String getDifferentWords() {
@@ -87,6 +99,14 @@ public class ExerciseChecker {
         this.messageLabel = messageLabel;
     }
 
+    public String getInputParamsTestLabel() {
+        return inputParamsTestLabel;
+    }
+
+    public void setInputParamsTestLabel(String inputParamTestLabel) {
+        this.inputParamsTestLabel = inputParamTestLabel;
+    }
+
     public String getYourOutputLabel() {
         return yourOutputLabel;
     }
@@ -101,46 +121,6 @@ public class ExerciseChecker {
 
     public void setCorrectOutputLabel(String correctOutputLabel) {
         this.correctOutputLabel = correctOutputLabel;
-    }
-
-    public boolean getYourOutputPanelHeaderRender() {
-        return yourOutputPanelHeaderRender;
-    }
-
-    public void setYourOutputPanelHeaderRender(boolean yourOutputPanelHeaderRender) {
-        this.yourOutputPanelHeaderRender = yourOutputPanelHeaderRender;
-    }
-
-    public boolean getCorrectOuputPanelHeaderRender() {
-        return correctOutputPanelHeaderRender;
-    }
-
-    public boolean getRecommendationPanelRender() {
-        return recommendationPanelRender;
-    }
-
-    public void setRecommendationPanelRender(boolean recommendationPanelRender) {
-        this.recommendationPanelRender = recommendationPanelRender;
-    }
-
-    public void setCorrectOutputPanelHeaderRender(boolean correctOutputPanelHeaderRender) {
-        this.correctOutputPanelHeaderRender = correctOutputPanelHeaderRender;
-    }
-
-    public boolean getResponseOutputPanelBodyRender() {
-        return responseOutputPanelBodyRender;
-    }
-
-    public void setResponseOutputPanelBodyRender(boolean responseOutputPanelBodyRender) {
-        this.responseOutputPanelBodyRender = responseOutputPanelBodyRender;
-    }
-
-    public boolean getCorrectOutputPanelBodyRender() {
-        return correctOutputPanelBodyRender;
-    }
-
-    public void setCorrectOutputPanelBodyRender(boolean correctOutputPanelBodyRender) {
-        this.correctOutputPanelBodyRender = correctOutputPanelBodyRender;
     }
 
     public boolean getResponseRenderBlock() {
@@ -165,6 +145,62 @@ public class ExerciseChecker {
 
     public void setMessagePanelHeaderRender(boolean messagePanelHeaderRender) {
         this.messagePanelHeaderRender = messagePanelHeaderRender;
+    }
+
+    public boolean getInputParamsTestPanelBodyRender() {
+        return inputParamsTestPanelBodyRender;
+    }
+
+    public void setInputParamsTestPanelBodyRender(boolean inputParamsTestPanelBodyRender) {
+        this.inputParamsTestPanelBodyRender = inputParamsTestPanelBodyRender;
+    }
+
+    public boolean getYourOutputPanelHeaderRender() {
+        return yourOutputPanelHeaderRender;
+    }
+
+    public void setYourOutputPanelHeaderRender(boolean yourOutputPanelHeaderRender) {
+        this.yourOutputPanelHeaderRender = yourOutputPanelHeaderRender;
+    }
+
+    public boolean getCorrectOuputPanelHeaderRender() {
+        return correctOutputPanelHeaderRender;
+    }
+
+    public void setCorrectOutputPanelHeaderRender(boolean correctOutputPanelHeaderRender) {
+        this.correctOutputPanelHeaderRender = correctOutputPanelHeaderRender;
+    }
+
+    public boolean getInputParamsTestPanelHeaderRender() {
+        return inputParamsTestPanelHeaderRender;
+    }
+
+    public void setInputParamsTestPanelHeaderRender(boolean inputParamsTestPanelHeaderRender) {
+        this.inputParamsTestPanelHeaderRender = inputParamsTestPanelHeaderRender;
+    }
+
+    public boolean getResponseOutputPanelBodyRender() {
+        return responseOutputPanelBodyRender;
+    }
+
+    public void setResponseOutputPanelBodyRender(boolean responseOutputPanelBodyRender) {
+        this.responseOutputPanelBodyRender = responseOutputPanelBodyRender;
+    }
+
+    public boolean getCorrectOutputPanelBodyRender() {
+        return correctOutputPanelBodyRender;
+    }
+
+    public void setCorrectOutputPanelBodyRender(boolean correctOutputPanelBodyRender) {
+        this.correctOutputPanelBodyRender = correctOutputPanelBodyRender;
+    }
+
+    public boolean getRecommendationPanelRender() {
+        return recommendationPanelRender;
+    }
+
+    public void setRecommendationPanelRender(boolean recommendationPanelRender) {
+        this.recommendationPanelRender = recommendationPanelRender;
     }
 
     public void compileRun() {
@@ -210,6 +246,7 @@ public class ExerciseChecker {
     public void autoCheckProgram() {
         String programOutput = processorBean.executeProgram()[1];
         String correctOutput = exerciseBean.getCorrectOutput();
+        String inputParamsTest = exerciseBean.getInputParams();
         Set<String> a = new HashSet(Arrays.asList(programOutput.trim().split("\\s")));
         Set<String> b = new HashSet(Arrays.asList(correctOutput.trim().split("\\s")));
         Set<String> result = symDiff(a, b);
@@ -221,13 +258,16 @@ public class ExerciseChecker {
             setResponseRenderBlock(true);
             setPanelRenderBlock(false);
             setMessagePanelHeaderRender(true);
+            setInputParamsTestPanelHeaderRender(false);
             setYourOutputPanelHeaderRender(false);
             setCorrectOutputPanelHeaderRender(false);
+            setInputParamsTestPanelBodyRender(true);
             setResponseOutputPanelBodyRender(false);
             setCorrectOutputPanelBodyRender(false);
             setRecommendationPanelRender(false);
         } else {
             setResponseText(programOutput);
+            setInputParamsTestResponseText(inputParamsTest);
             setDifferentWords(convertToJavaScriptArray(result).toString());
             setAlertClass("danger");
             setIconClass("times-circle-o");
@@ -235,8 +275,10 @@ public class ExerciseChecker {
             setResponseRenderBlock(true);
             setPanelRenderBlock(true);
             setMessagePanelHeaderRender(true);
+            setInputParamsTestPanelHeaderRender(true);
             setYourOutputPanelHeaderRender(true);
             setCorrectOutputPanelHeaderRender(true);
+            setInputParamsTestPanelBodyRender(true);
             setResponseOutputPanelBodyRender(true);
             setCorrectOutputPanelBodyRender(true);
             setRecommendationPanelRender(false);

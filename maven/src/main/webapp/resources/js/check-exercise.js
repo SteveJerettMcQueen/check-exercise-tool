@@ -65,6 +65,7 @@ function markDifferentWords(data) {
                     element: "mark",
                     className: "highlight-correct-output"
                 });
+
             } catch (error) {
                 console.log("No values to mark!");
             }
