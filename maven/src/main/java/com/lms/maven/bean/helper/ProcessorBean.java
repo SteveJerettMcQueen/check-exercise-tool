@@ -31,6 +31,8 @@ import javax.inject.Named;
 public class ProcessorBean implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    private static final String INPUT_FILE = "input.txt";
+    private static final long TIME_OUT = 10;
 
     private String directory;
 
@@ -53,33 +55,32 @@ public class ProcessorBean implements Serializable {
 
     public String[] executeProgram() {
 
-        String[] output;
         String programName = exerciseBean.getExerName();
         String inputParams = exerciseBean.getInputParams();
         String programCode = exerciseBean.getProgramCode();
 
+        String[] output;
         try {
             String programFile = programName.concat(".java");
-            deleteFile(directory.concat("\\").concat(programFile));
+            String className = programFile.substring(0, programFile.indexOf("."));
             createFile(programFile, programCode);
             if (inputParams != null) {
-                createFile("input.txt", inputParams);
+                createFile(INPUT_FILE, inputParams);
             }
 
             ProcessBuilder pb = new ProcessBuilder();
             Process compileProc = compile(programFile, pb);
-            compileProc.waitFor(10, TimeUnit.SECONDS);
+            compileProc.waitFor(TIME_OUT, TimeUnit.SECONDS);
             compileProc.destroy();
             String err = output(compileProc.getErrorStream());
             switch (compileProc.waitFor()) {
                 case 0:
-                    File inputFile = new File("input.txt");
+                    File inputFile = new File(INPUT_FILE);
                     if (inputFile.exists()) {
                         pb.redirectInput(ProcessBuilder.Redirect.from(inputFile));
                     }
-                    String clazz = programFile.substring(0, programFile.indexOf("."));
-                    Process runProc = run(clazz, pb);
-                    runProc.waitFor(10, TimeUnit.SECONDS);
+                    Process runProc = run(className, pb);
+                    runProc.waitFor(TIME_OUT, TimeUnit.SECONDS);
                     runProc.destroy();
                     String out2 = output(runProc.getInputStream());
                     String err2 = output(runProc.getErrorStream());
@@ -98,8 +99,6 @@ public class ProcessorBean implements Serializable {
                             }
                             break;
                     }
-                    deleteFile(clazz + ".class");
-                    deleteFile(directory.concat("\\").concat(programFile));
                     break;
                 case 2:
                     output = new String[]{"0", err};
@@ -108,7 +107,9 @@ public class ProcessorBean implements Serializable {
                     output = new String[]{"1", err};
                     break;
             }
-            deleteFile("input.txt");
+            deleteFile(className.concat(".class"));
+            deleteFile(directory.concat("\\").concat(programFile));
+            deleteFile(INPUT_FILE);
         } catch (Exception ex) {
             output = new String[]{"5", ex.getMessage()};
         }
@@ -120,8 +121,8 @@ public class ProcessorBean implements Serializable {
         return pb.start();
     }
 
-    private Process run(String clazz, ProcessBuilder pb) throws Exception {
-        pb.command(new String[]{"java", "-classpath", directory.concat("\\"), clazz});
+    private Process run(String className, ProcessBuilder pb) throws Exception {
+        pb.command(new String[]{"java", "-classpath", directory.concat("\\"), className});
         return pb.start();
     }
 
@@ -142,12 +143,8 @@ public class ProcessorBean implements Serializable {
     }
 
     private void createFile(String name, String text) throws Exception {
-        Files.write(
-                Paths.get(name),
-                Arrays.asList(text.split("\n")),
-                StandardCharsets.UTF_8,
-                StandardOpenOption.CREATE,
-                StandardOpenOption.WRITE
+        Files.write(Paths.get(name), Arrays.asList(text.split("\n")),
+                StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.WRITE
         );
     }
 }

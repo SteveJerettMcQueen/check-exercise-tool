@@ -13,5 +13,4 @@ com\lms\maven\ejb\ChapterFacade.class
 com\lms\maven\bean\helper\ChapterItemConverter.class
 com\lms\maven\util\Util.class
 com\lms\maven\bean\model\ExerciseBean.class
-com\lms\maven\bean\helper\ProgressBean.class
 com\lms\maven\entity\Exercise_.class
