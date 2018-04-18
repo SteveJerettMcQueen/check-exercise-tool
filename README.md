@@ -1,6 +1,6 @@
 # Check Exercise Tool
 
-The goal of this project is to develop a "Check Exercise Tool" exactly like the one presented at the website:
+The goal of this project is to develop a "Check Exercise Tool" exactly like the one presented on this website:
 
 #### [https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml "Check Exercise Tool")
 
@@ -30,7 +30,7 @@ User Interface:  | **JavaServer Faces, Bootstrap 3.3.7**
 
 ## Additional Software
 
-* #### Ace Editor
+* #### [Ace Editor](https://ace.c9.io/, "Ace Editor Website")
 An embeddable code editor written in JavaScript. It matches the features and performance of native editors such as Sublime, Vim and TextMate.
-* #### Mark.js
+* #### [Mark.js](https://markjs.io/, "Mark.js Website')
 Search term highlighting intended for every use case. Can be used with plain JavaScript or as jQuery plugin.
