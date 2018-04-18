@@ -2,7 +2,7 @@
 
 The goal of this project is to develop a "Check Exercise Tool" exactly like the one presented at the website:
 
-[https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml "Check Exercise Tool")
+#### [https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml "Check Exercise Tool")
 
 ## Authors
 
@@ -30,7 +30,7 @@ User Interface:  | **JavaServer Faces, Bootstrap 3.3.7**
 
 ## Additional Software
 
-* ####Ace Editor
+* #### Ace Editor
 An embeddable code editor written in JavaScript. It matches the features and performance of native editors such as Sublime, Vim and TextMate.
-* ####Mark.js
+* #### Mark.js
 Search term highlighting intended for every use case. Can be used with plain JavaScript or as jQuery plugin.
