@@ -2,7 +2,7 @@
 
 The goal of this project is to develop a "Check Exercise Tool" exactly like the one presented at the website:
 
-#####[https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml "Check Exercise Tool")
+[https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml](https://liveexample.pearsoncmg.com/CheckExercise/faces/CheckExercise.xhtml "Check Exercise Tool")
 
 ## Authors
 
