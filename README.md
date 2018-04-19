@@ -6,7 +6,7 @@ The goal of this project is to develop a "Check Exercise Tool" exactly like the 
 
 ## Authors
 
-* **Lauren** 
+* **Lauren Ason** 
 * **Miranda Brawner** 
 * **Steve McQueen** 
 

@@ -29,3 +29,8 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\repositories\check-exercise-tool\databases\checkexercisetool
 Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Apr 18 20:01:43 EDT 2018: Shutting down Derby engine
+----------------------------------------------------------------
+Wed Apr 18 20:01:43 EDT 2018:
+Shutting down instance a816c00e-0162-dad0-bf9e-00003ee3f381 on database directory E:\Master\Processed Information\Computer Science\NetbeansWorkSpace\repositories\check-exercise-tool\databases\checkexercisetool\checkexercisetool with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
