@@ -247,6 +247,7 @@ public class ExerciseChecker {
         String programOutput = processorBean.executeProgram()[1];
         String correctOutput = exerciseBean.getCorrectOutput();
         String inputParamsTest = exerciseBean.getInputParams();
+        boolean isRendered = (exerciseBean.getInputParams() != null);
         Set<String> a = new HashSet(Arrays.asList(programOutput.trim().split("\\s")));
         Set<String> b = new HashSet(Arrays.asList(correctOutput.trim().split("\\s")));
         Set<String> result = symDiff(a, b);
@@ -258,10 +259,10 @@ public class ExerciseChecker {
             setResponseRenderBlock(true);
             setPanelRenderBlock(false);
             setMessagePanelHeaderRender(true);
-            setInputParamsTestPanelHeaderRender(false);
+            setInputParamsTestPanelHeaderRender(isRendered);
             setYourOutputPanelHeaderRender(false);
             setCorrectOutputPanelHeaderRender(false);
-            setInputParamsTestPanelBodyRender(true);
+            setInputParamsTestPanelBodyRender(isRendered);
             setResponseOutputPanelBodyRender(false);
             setCorrectOutputPanelBodyRender(false);
             setRecommendationPanelRender(false);
@@ -275,10 +276,10 @@ public class ExerciseChecker {
             setResponseRenderBlock(true);
             setPanelRenderBlock(true);
             setMessagePanelHeaderRender(true);
-            setInputParamsTestPanelHeaderRender(true);
+            setInputParamsTestPanelHeaderRender(isRendered);
             setYourOutputPanelHeaderRender(true);
             setCorrectOutputPanelHeaderRender(true);
-            setInputParamsTestPanelBodyRender(true);
+            setInputParamsTestPanelBodyRender(isRendered);
             setResponseOutputPanelBodyRender(true);
             setCorrectOutputPanelBodyRender(true);
             setRecommendationPanelRender(false);
